@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wolfram Physics Project on Chris Perardi | Perfunctory Portfolio</title>
-    <link>/physics/</link>
+    <link>https://perardi.github.io/portfolio/public/physics/</link>
     <description>Recent content in Wolfram Physics Project on Chris Perardi | Perfunctory Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/physics/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://perardi.github.io/portfolio/public/physics/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
