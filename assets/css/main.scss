@@ -5,14 +5,7 @@
    Author's custom styles
    ========================================================================== */
 
-$baseBlue: #616670;
-$bodyBlue: saturate(darken($baseBlue,15%),10%);
-$bodyBlueDark: saturate(lighten($baseBlue,35%),10%);
-$bodyBlueLighter: saturate(lighten($baseBlue,25%),05%);
-$greyBG: desaturate(lighten($baseBlue,52.5%),02.5%);
-$greyBGDark: desaturate(darken($baseBlue,30%),02.5%);
-$greyBGNav: rgba(desaturate(lighten($baseBlue,40%),05%),0.8);
-$greyBGNavDark: rgba(desaturate(darken($baseBlue,40%),05%),0.8);
+@import "components/colors.scss";
 
 
 @mixin breakpoint($scheme) {
@@ -85,13 +78,11 @@ main {
 }
 
 section {
-    width: 80vw;
-    max-width: 48rem;
+    width: clamp(2rem, 80vw, 44rem);
     padding-top: 2rem;
     padding-bottom: 4rem;
 
     &.home {
-      padding-top: 2rem;
       max-width: 48rem;
     }
 }
@@ -144,15 +135,20 @@ h2 {
 }
 
 h3 {
-  font-weight: 400;
+  font-weight:      500;
+  line-height:      1.25;
+
+  font-size:        clamp(1.0rem, 1.5vw, 2.0rem); 
+  margin-bottom:    clamp(0.25rem, 0.5vw, 0.375rem); 
+  margin-top:    clamp(0.5rem, 1.5vw, 1rem); 
 }
 
 p {
   font-weight:    400;
-  line-height:    1.5;
+  line-height:    1.6;
 
   font-size:      clamp(0.875rem, 1.125vw, 1.625rem);
-  margin-bottom:  clamp(0.25rem, 1vw, 0.75rem); 
+  margin-bottom:  clamp(0.75rem, 1.5vw, 1.5rem); 
 
 
 
@@ -170,5 +166,5 @@ img.gallery {
   width:            100%;
   margin-top:       clamp(1rem, 2vw, 2rem); 
   margin-bottom:    clamp(1rem, 2vw, 2rem); 
-  box-shadow: 0 0 1.5rem 0 rgba($color: #000000, $alpha: 0.25);
+  box-shadow:       0 0.5rem 1.5rem 0 rgba($color: #000000, $alpha: 0.25);
 }

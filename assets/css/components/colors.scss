@@ -1,0 +1,8 @@
+$baseBlue:              #616670;
+$bodyBlue:              saturate(darken($baseBlue,15%),10%);
+$bodyBlueDark:          saturate(lighten($baseBlue,35%),10%);
+$bodyBlueLighter:       saturate(lighten($baseBlue,25%),05%);
+$greyBG:                desaturate(lighten($baseBlue,52.5%),02.5%);
+$greyBGDark:            desaturate(darken($baseBlue,30%),05%);
+$greyBGNav:             rgba(desaturate(lighten($baseBlue,40%),05%),0.9);
+$greyBGNavDark:         rgba(desaturate(darken($baseBlue,35%),05%),0.9);

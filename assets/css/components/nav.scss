@@ -43,7 +43,7 @@ nav {
         flex-direction: row;
         align-items: center;
         height: clamp(3rem, 3vw, 4rem);
-        font-size:      clamp(0.75rem, 1.0vw, 1.5rem);
+        font-size:      clamp(0.625rem, 0.75vw, 1.25rem);
         font-weight: 400;
         text-transform: uppercase;
       }
@@ -60,6 +60,11 @@ nav {
           font-size:      clamp(0.75rem, 1.0vw, 1.5rem);
           font-weight: 400;
           cursor: pointer;
+          color: $bodyBlue;
+
+          &:hover {
+              border: none;
+          }
         }
       }
     }
