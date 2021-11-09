@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" href="icon.png">
+
+
+  {{ $style := resources.Get "css/main.scss" | toCSS }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+
+  <meta name="theme-color" content="#cbcdd2">
+</head>
+
+<body>
+
+{{ if (isset .Params "isdark") }}
+<body class="dark-mode">
+{{ else }}
+<body>
+{{ end }}    
+
+<main>
+  <section>
+    {{ .Content }}
+
+    {{ if (isset .Params "isphoto") }}
+    {{ with .Resources.ByType "image" }}
+{{ range . }}
+<img class="gallery" src="{{ .RelPermalink }}" loading="lazy" width="2000">
+{{ end }}
+{{ end }}
+    {{ else }}
+    
+    {{ end }}    
+
+  </section>
+</main>
+
+{{ partial "nav.html" . }}
+
+</body>
+
+</html>

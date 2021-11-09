@@ -1,0 +1,25 @@
+{{ if (isset .Params "isdark") }}
+<nav class="dark-mode">
+{{ else }}
+<nav>
+{{ end }}    
+
+
+    <ul>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.meta }}
+      <li {{ if $currentPage.IsMenuCurrent "meta" . }}class="active"{{ end }}>
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+          {{ end }}
+    </ul>
+    <ul>
+        <span>portfolio:</span>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.port }}
+      <li {{ if $currentPage.IsMenuCurrent "port" . }}class="active"{{ end }}>
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+          {{ end }}
+    </ul>
+  </nav>

@@ -1,0 +1,174 @@
+@import "normalize.scss";
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+$baseBlue: #616670;
+$bodyBlue: saturate(darken($baseBlue,15%),10%);
+$bodyBlueDark: saturate(lighten($baseBlue,35%),10%);
+$bodyBlueLighter: saturate(lighten($baseBlue,25%),05%);
+$greyBG: desaturate(lighten($baseBlue,52.5%),02.5%);
+$greyBGDark: desaturate(darken($baseBlue,30%),02.5%);
+$greyBGNav: rgba(desaturate(lighten($baseBlue,40%),05%),0.8);
+$greyBGNavDark: rgba(desaturate(darken($baseBlue,40%),05%),0.8);
+
+
+@mixin breakpoint($scheme) {
+  @if $scheme == dark {
+    @media (prefers-color-scheme: dark) {
+      @content;
+    }
+  }
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+body {
+  font-family: 'Archivo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: $greyBG;
+  box-sizing: border-box;
+  font-size: 16px;
+  position: relative;
+
+  &.dark-mode {
+    background-color: $greyBGDark;
+  }
+
+  &:after {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    background-color: $baseBlue;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    z-index: 0;
+    display: none;
+
+    mix-blend-mode: multiply;
+    opacity: 0.10;
+    animation: grain 0.4s steps(1) infinite;
+    background-image: url("../img/noise-256w.png");
+    @keyframes grain {
+      0%,
+      100% {
+        background-position: 0 0;
+      }
+      20% {
+        background-position: 50% 50%;
+      }
+      40% {
+        background-position: 25% 25%;
+      }
+      60% {
+        background-position: 75% 75%;
+      }
+      80% {
+        background-position: 0% 100%;
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+section {
+    width: 80vw;
+    max-width: 48rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+
+    &.home {
+      padding-top: 2rem;
+      max-width: 48rem;
+    }
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 1rem;
+  color: $bodyBlue;
+  font-weight: 400;
+
+  &.dark-mode {
+    color: $bodyBlueDark;
+  }
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1pt solid $bodyBlueLighter;
+  padding-bottom: 1pt;
+  color: $bodyBlue;
+  transition: border-bottom 0.125s ease-in-out;
+
+  &:hover {
+    border-bottom: 1pt solid $bodyBlue;
+  }
+}
+
+h1 {
+  font-weight:      100;
+  line-height:      1.25;
+
+  font-size:        clamp(1.875rem, 3.5vw, 3.75rem); 
+  margin-bottom:    clamp(0.25rem, 0.875vw, 0.75rem);
+}
+
+h2 {
+  font-weight:      300;
+  line-height:      1.25;
+
+  font-size:        clamp(1.125rem, 1.625vw, 2.25rem); 
+  margin-bottom:    clamp(0.5rem, 1.5vw, 1rem); 
+
+
+  &.sarcasm {
+    font-weight: 300;
+    font-style: italic;
+  }
+}
+
+h3 {
+  font-weight: 400;
+}
+
+p {
+  font-weight:    400;
+  line-height:    1.5;
+
+  font-size:      clamp(0.875rem, 1.125vw, 1.625rem);
+  margin-bottom:  clamp(0.25rem, 1vw, 0.75rem); 
+
+
+
+    &.sarcasm {
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(0.75rem, 1.125vw, 1.5rem);
+      opacity: 0.75;
+  }
+}
+
+@import "components/nav.scss";  
+
+img.gallery {
+  width:            100%;
+  margin-top:       clamp(1rem, 2vw, 2rem); 
+  margin-bottom:    clamp(1rem, 2vw, 2rem); 
+  box-shadow: 0 0 1.5rem 0 rgba($color: #000000, $alpha: 0.25);
+}
