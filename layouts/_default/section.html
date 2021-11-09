@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="icon.png">
 
 
-  {{ $style := resources.Get "css/main.scss" | toCSS }}
+  {{ $style := resources.Get "css/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
 
@@ -27,7 +27,13 @@
 {{ end }}    
 
 <main>
-  <section>
+  
+    {{ if (isset .Params "isdark") }}
+    <section class="dark-mode">
+    {{ else }}
+    <section>
+    {{ end }}    
+
     {{ .Content }}
 
     {{ if (isset .Params "isphoto") }}

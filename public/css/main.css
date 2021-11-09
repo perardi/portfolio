@@ -418,8 +418,8 @@ section {
   width: clamp(2rem, 80vw, 44rem);
   padding-top: 2rem;
   padding-bottom: 4rem; }
-  section.home {
-    max-width: 48rem; }
+  section.dark-mode {
+    width: clamp(2rem, 80vw, 52rem); }
 
 h1, h2, h3, h4, h5, h6, p, ul, li {
   margin: 0;
