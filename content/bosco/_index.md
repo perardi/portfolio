@@ -6,6 +6,12 @@ title: Bosco Cheat Sheet
 
 ### Dates & Times
 
+My car rental starts at **11am on Wednesday, December 22**. It ends on **Monday, December 27, at 4:30pm**.
+
+So, Bosco will be ready to go at…well, whatever time works for you on Wednesday.
+
+I estimate I'll be back at 4pm on Monday.
+
 ### Emergency Contact Numbers
 
 My primary contact number is:

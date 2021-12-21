@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Bosco Cheat Sheet</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -35,6 +35,12 @@
     {{ else }}
     <section>
     {{ end }}    
+
+    {{ with .Resources.ByType "image" }}
+    {{ range . }}
+    <img class="gallery" src="{{ .RelPermalink }}" loading="lazy" width="2000">
+    {{ end }}
+    {{ end }}
 
     {{ .Content }}
 
