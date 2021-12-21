@@ -38,20 +38,10 @@
 
     {{ .Content }}
 
-    {{ if (isset .Params "isphoto") }}
-    {{ with .Resources.ByType "image" }}
-{{ range . }}
-<img class="gallery" src="{{ .RelPermalink }}" loading="lazy" width="2000">
-{{ end }}
-{{ end }}
-    {{ else }}
-    
-    {{ end }}    
+ 
 
   </section>
 </main>
-
-{{ partial "nav.html" . }}
 
 </body>
 
