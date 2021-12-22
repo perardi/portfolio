@@ -19,22 +19,12 @@
 </head>
 
 <body>
-
-{{ if (isset .Params "isdark") }}
-<body class="dark-mode">
-{{ else }}
-<body>
-{{ end }}    
+   
 
 <main>
   
-    {{ if (isset .Params "isdark") }}
-    <section class="dark-mode">
-    {{ else if (isset .Params "isresume") }}
-    <section class="resume">
-    {{ else }}
-    <section>
-    {{ end }}    
+ 
+    <section class="bosco">
 
     {{ with .Resources.ByType "image" }}
     {{ range . }}
