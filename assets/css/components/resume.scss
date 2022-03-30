@@ -1,44 +1,47 @@
 section.resume {
-    width: clamp(2rem, 80vw, 52rem);
-    display: grid;
-    grid-template-columns: 30% 60%;
-    grid-gap: 0 10%;
+    width:                          clamp(2rem, 80vw, 52rem);
+    display:                        grid;
+    grid-template-columns:          30% 60%;
+    grid-gap:                       0 10%;
+    align-items: start;
 
-    header {
-      grid-column: 1 / span 2;
-      margin-bottom:    $headlineMarginGlobal;
+    .resume-intro {
+      grid-column:                  1 / span 2;
     }
 
     aside {
+
         ul {
-            list-style-type: none;
+            list-style-type:        none;
+            margin-bottom:          clamp(1rem, 1.5vw, 1.75rem);
 
             li {
-                font-weight:      400;
-                line-height:      1.5;
+                font-weight:        400;
+                line-height:        1.5;
   
-                font-size:        clamp(0.75rem, 1.0vw, 1.5rem);
-                margin-bottom:    $headlineMarginGlobal;
+                font-size:          clamp(0.75rem, 0.875vw, 1.25rem);
+                margin-bottom:      $headlineMarginGlobal;
             }
         }
     }
 
-    article {
+    .resume-body {
+        padding:                    0;
 
         h3.bump {
-            margin-top:    clamp(1.5rem, 2.0vw, 2.5rem);
+            margin-top:             clamp(1.5rem, 2.0vw, 2.5rem);
         }
 
         ul {
-            list-style-type: none;
-            margin-bottom:    $headlineMarginGlobal;
+            list-style-type:        none;
+            margin-bottom:          clamp(1rem, 1.5vw, 1.75rem);
 
             li {
-            font-weight:      400;
-            line-height:      1.5;
+            font-weight:            400;
+            line-height:            1.5;
   
-            font-size:        clamp(0.75rem, 1.0vw, 1.5rem);
-            margin-bottom:    $headlineMarginGlobal;
+            font-size:              clamp(0.75rem, 1.0vw, 1.5rem);
+            margin-bottom:          $headlineMarginGlobal;
             }
         }
     }

@@ -1,4 +1,5 @@
-baseURL = "https://perardi.github.io/portfolio/public/"
+baseURL = "https://perardi.github.io/"
 languageCode = "en-us"
-title = "Chris Perardi | Perfunctory Portfolio"
+title = "Chris Perardi | Portfolio"
 sectionPagesMenu = "main"
+publishDir = "docs"

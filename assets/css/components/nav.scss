@@ -2,7 +2,7 @@ nav {
     position: fixed;
     z-index: 10;
     bottom: 0;
-    height: clamp(3rem, 3vw, 4rem);
+    height: clamp(3rem, 3.5vw, 4rem);
     background-color: $greyBGNavDark;
     -webkit-backdrop-filter: blur(2pt) grayscale(100%);
     backdrop-filter: blur(2pt grayscale(100%));
@@ -11,34 +11,59 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
     ul {
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 1rem;
-      padding: 0 1rem;
+      gap: 0.75rem;
+      padding: 0 1.5rem;
 
-      span {
-  color: $bodyBlueDark;
-  margin-left: auto;
-  text-transform: uppercase;
-  line-height: 1;
-  font-size:        clamp(0.5rem, 0.825vw, 1rem);
-      color: rgba($color: $bodyBlueDark, $alpha: 0.75);
+      @include breakpoint(baby-bear) {
+        padding: 0 1rem;
       }
 
+      &.port-links {
+        
+        span {
+          color: $bodyBlueDark;
+          margin-left: auto;
+          text-transform: uppercase;
+          line-height: 1;
+          font-size:        clamp(0.5rem, 0.75vw, 1rem);
+              color: rgba($color: $bodyBlueDark, $alpha: 0.5);
+              letter-spacing: 0.5pt;
+        }
+      }
+  
       li {
         margin: 0;
         line-height: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-transform: up;
+
+    
 
         a {
           margin: 0;
           padding: 0;
           border: none;
           line-height: 1;
-          font-size:        clamp(0.5rem, 0.825vw, 1rem);
+          font-size:        clamp(0.625rem, 1vw, 1rem);
       color: rgba($color: $bodyBlueDark, $alpha: 0.75);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      
 
       &:hover {
         border: none;

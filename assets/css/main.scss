@@ -16,6 +16,17 @@
   }
 }
 
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (max-width: 1600px) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media (max-width: 1250px) { @content; }
+  }
+  @else if $point == baby-bear {
+    @media (max-width: 650px)  { @content; }
+  }
+}
 
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
@@ -89,7 +100,13 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;  
-  padding: 0 0 8rem 0;
+  padding: 2rem 0 8rem 0;
+
+    &.home {
+      width: clamp(2rem, 80vw, 50rem);
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
     
     &.bosco {
       h3 {
@@ -100,7 +117,7 @@ section {
 
 article {
   width: clamp(2rem, 80vw, 44rem);
-  padding: 2rem 0 2rem 0;
+  padding: clamp(1.75rem, 3vw, 3rem) 0 clamp(1.75rem, 3vw, 3rem) 0;
 }
 
 
@@ -111,6 +128,33 @@ article {
 @import "components/resume.scss";  
 
 figure {
+
+  img {
+    width:          clamp(2rem, 80vw, 64rem);
+    box-shadow:     0 0.5rem 1rem 0 rgba($color: #000000, $alpha: 0.75);
+  }
+
+  figcaption {
+    width:          clamp(2rem, 80vw, 64rem);
+    font-weight:    400;
+    font-size:      clamp(0.5rem, 0.75vw, 0.875rem);
+    color:          rgba($color: $bodyBlueDark, $alpha: 0.75);
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    margin-top:     1rem;
+  }
+
+  &.hero {
+    background: #fff url('') no-repeat scroll center center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 2rem 0;
+  }
 
   &.physics-hero {
     background: transparent url('../img/physics-bg.jpg') no-repeat scroll center center;
@@ -124,6 +168,8 @@ figure {
 
     img {
       height: 75%;
+      width: auto;
+      box-shadow: none;
     }
   }
 
@@ -138,31 +184,16 @@ figure {
     justify-content: center;
     padding: 2rem 0 2rem 0;
 
-    img {
-      width: clamp(2rem, 80vw, 60rem);
-      box-shadow: 0 0.5rem 1rem 0 rgba($color: #000000, $alpha: 0.75);
-    }
 
-    figcaption {
-      width: clamp(2rem, 80vw, 60rem);
-      font-weight:      400;
-      font-size:        clamp(0.5rem, 0.825vw, 1rem);
-      color: rgba($color: $bodyBlueDark, $alpha: 0.75);
-      text-transform: uppercase;
-      letter-spacing: 1pt;
-      margin-top: 1rem;
-    }
   }
 
 }
 
 img.gallery {
-  width:            100%;
+  width:          clamp(2rem, 80vw, 64rem);
   margin-top:       clamp(1rem, 2vw, 2rem); 
   margin-bottom:    clamp(1rem, 2vw, 2rem); 
   box-shadow:       0 0.5rem 1.5rem 0 rgba($color: #000000, $alpha: 0.25);
 
-  &:first-of-type {
-    margin-top: 1rem;
-  }
+
 }
