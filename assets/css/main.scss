@@ -23,7 +23,7 @@
 body {
   font-family: 'Archivo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
-  background-color: $greyBG;
+    background-color: $greyBGDark;
   box-sizing: border-box;
   font-size: 16px;
   position: relative;
@@ -75,18 +75,22 @@ main {
   align-items: center;
   position: relative;
   z-index: 1;
+
+  &.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 3rem);
+  }
 }
 
 section {
-    width: clamp(2rem, 80vw, 44rem);
-    padding-top: 2rem;
-    padding-bottom: 4rem;
-
-
-    &.dark-mode {
-      width: clamp(2rem, 80vw, 52rem);
-    }
-
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  padding: 0 0 8rem 0;
+    
     &.bosco {
       h3 {
         margin-top: 1.5rem
@@ -94,6 +98,10 @@ section {
     }
 }
 
+article {
+  width: clamp(2rem, 80vw, 44rem);
+  padding: 2rem 0 2rem 0;
+}
 
 
 @import "components/typography.scss";  
@@ -101,6 +109,52 @@ section {
 @import "components/nav.scss";  
 
 @import "components/resume.scss";  
+
+figure {
+
+  &.physics-hero {
+    background: transparent url('../img/physics-bg.jpg') no-repeat scroll center center;
+    background-size: cover;
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 75%;
+    }
+  }
+
+  &.physics-shot {
+    background: #fff url('../img/physics-bg-wash.jpg') no-repeat scroll center center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 2rem 0;
+
+    img {
+      width: clamp(2rem, 80vw, 60rem);
+      box-shadow: 0 0.5rem 1rem 0 rgba($color: #000000, $alpha: 0.75);
+    }
+
+    figcaption {
+      width: clamp(2rem, 80vw, 60rem);
+      font-weight:      400;
+      font-size:        clamp(0.5rem, 0.825vw, 1rem);
+      color: rgba($color: $bodyBlueDark, $alpha: 0.75);
+      text-transform: uppercase;
+      letter-spacing: 1pt;
+      margin-top: 1rem;
+    }
+  }
+
+}
 
 img.gallery {
   width:            100%;

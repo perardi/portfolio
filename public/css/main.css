@@ -372,7 +372,7 @@ textarea {
    ========================================================================== */
 body {
   font-family: 'Archivo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background-color: #eeeeef;
+  background-color: #1c1c1c;
   box-sizing: border-box;
   font-size: 16px;
   position: relative; }
@@ -413,42 +413,53 @@ main {
   align-items: center;
   position: relative;
   z-index: 1; }
+  main.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 3rem); }
 
 section {
-  width: clamp(2rem, 80vw, 44rem);
-  padding-top: 2rem;
-  padding-bottom: 4rem; }
-  section.dark-mode {
-    width: clamp(2rem, 80vw, 52rem); }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 8rem 0; }
   section.bosco h3 {
     margin-top: 1.5rem; }
+
+article {
+  width: clamp(2rem, 80vw, 44rem);
+  padding: 2rem 0 2rem 0; }
 
 h1, h2, h3, h4, h5, h6, p, ul, li {
   margin: 0;
   padding: 0;
   line-height: 1;
   font-size: 1rem;
-  color: #373e4e;
+  color: #b3b4b7;
   font-weight: 400; }
   h1.dark-mode, h2.dark-mode, h3.dark-mode, h4.dark-mode, h5.dark-mode, h6.dark-mode, p.dark-mode, ul.dark-mode, li.dark-mode {
     color: #b3b4b7; }
 
 a {
   text-decoration: none;
-  border-bottom: 1pt solid #9ea5b3;
-  padding-bottom: 1pt;
-  color: #373e4e;
+  border-bottom: 1pt solid #5a5b5e;
+  padding-bottom: 3pt;
+  color: #b3b4b7;
   transition: border-bottom 0.125s ease-in-out; }
   a:hover {
-    border-bottom: 1pt solid #373e4e; }
+    border-bottom: 1pt solid #b3b4b7; }
 
 h1 {
   font-weight: 100;
   line-height: 1.25;
-  font-size: clamp(1.875rem, 3.5vw, 3.75rem);
+  font-size: clamp(1.825rem, 3.125vw, 3.5rem);
   margin-bottom: clamp(0.5rem, 1vw, 1.25rem);
   display: flex;
   flex-direction: column; }
+  h1.home {
+    font-size: clamp(2rem, 3.75vw, 3rem); }
   h1 span {
     font-size: clamp(1rem, 1.25vw, 2rem);
     text-transform: uppercase;
@@ -458,19 +469,20 @@ h1 {
     line-height: 1; }
 
 h2 {
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.25;
-  font-size: clamp(1.25rem, 1.75vw, 2.25rem);
+  font-size: clamp(1.5rem, 2.125vw, 2.325rem);
   margin-bottom: clamp(0.375rem, 0.875vw, 0.875rem); }
+  h2.home {
+    font-size: clamp(1.375rem, 1.875vw, 2.125rem); }
   h2.sarcasm {
     font-weight: 300;
     font-style: italic; }
 
 h3 {
-  font-weight: 500;
+  font-weight: 200;
   line-height: 1.25;
-  border-top: 1pt solid #d7dae0;
-  font-size: clamp(1rem, 1.25vw, 2rem);
+  font-size: clamp(1.25rem, 1.5vw, 2rem);
   margin-bottom: clamp(0.375rem, 0.875vw, 0.875rem);
   padding-top: clamp(0.25rem, 0.5vw, 0.75rem); }
 
@@ -500,13 +512,39 @@ h5 {
 p {
   font-weight: 400;
   line-height: 1.75;
-  font-size: clamp(0.75rem, 1vw, 1.5rem);
+  font-size: clamp(1rem, 1.125vw, 1.325rem);
   margin-bottom: clamp(0.375rem, 0.875vw, 0.875rem); }
+  p em {
+    font-style: italic;
+    opacity: 0.8; }
+  p.portfolio-intro {
+    font-size: clamp(1.25rem, 1.325vw, 1.5rem);
+    font-weight: 350; }
   p.sarcasm {
     font-style: italic;
     font-weight: 300;
     font-size: clamp(0.6875rem, 0.9375vw, 1.1875rem);
     opacity: 0.75; }
+  p.home {
+    font-size: clamp(1rem, 1.375vw, 1.5rem); }
+
+ul {
+  list-style-type: none; }
+  ul li {
+    font-weight: 400;
+    line-height: 1.75;
+    font-size: clamp(1rem, 1.125vw, 1.325rem);
+    margin-bottom: clamp(0.375rem, 0.875vw, 0.875rem);
+    position: relative; }
+    ul li::before {
+      content: "\2012";
+      position: absolute;
+      left: -1.25rem;
+      opacity: 0.5; }
+    ul li ul {
+      margin-left: 1rem; }
+      ul li ul li::before {
+        opacity: 0.25; }
 
 .mono {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -517,54 +555,41 @@ nav {
   z-index: 10;
   bottom: 0;
   height: clamp(3rem, 3vw, 4rem);
-  background-color: rgba(218, 219, 220, 0.9);
+  background-color: rgba(15, 15, 15, 0.9);
   -webkit-backdrop-filter: blur(2pt) grayscale(100%);
   backdrop-filter: blur(2pt grayscale(100%));
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem; }
-  nav.dark-mode {
-    background-color: rgba(15, 15, 15, 0.9); }
-    nav.dark-mode ul span {
-      color: #b3b4b7; }
-    nav.dark-mode ul li a {
-      color: #8c8e91; }
+  justify-content: space-between; }
   nav ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin: 0 1rem; }
+    gap: 1rem;
+    padding: 0 1rem; }
     nav ul span {
-      display: inline-flex;
-      flex-direction: row;
-      align-items: center;
-      height: clamp(3rem, 3vw, 4rem);
-      font-size: clamp(0.625rem, 0.625vw, 1.25rem);
-      font-weight: 400;
+      color: #b3b4b7;
+      margin-left: auto;
       text-transform: uppercase;
-      letter-spacing: 0.5pt;
-      font-weight: 500;
-      opacity: 0.7; }
+      line-height: 1;
+      font-size: clamp(0.5rem, 0.825vw, 1rem);
+      color: rgba(179, 180, 183, 0.75); }
     nav ul li {
-      list-style-type: none; }
+      margin: 0;
+      line-height: 1; }
       nav ul li a {
-        border: none;
+        margin: 0;
         padding: 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        height: clamp(3rem, 3vw, 4rem);
-        font-size: clamp(0.625rem, 0.75vw, 1.25rem);
-        font-weight: 400;
-        cursor: pointer;
-        color: dimgray; }
+        border: none;
+        line-height: 1;
+        font-size: clamp(0.5rem, 0.825vw, 1rem);
+        color: rgba(179, 180, 183, 0.75); }
         nav ul li a:hover {
           border: none; }
+      nav ul li::before {
+        display: none; }
 
 section.resume {
   width: clamp(2rem, 80vw, 52rem);
@@ -591,6 +616,40 @@ section.resume {
       line-height: 1.5;
       font-size: clamp(0.75rem, 1vw, 1.5rem);
       margin-bottom: clamp(0.375rem, 0.875vw, 0.875rem); }
+
+figure.physics-hero {
+  background: transparent url("../img/physics-bg.jpg") no-repeat scroll center center;
+  background-size: cover;
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  figure.physics-hero img {
+    height: 75%; }
+
+figure.physics-shot {
+  background: #fff url("../img/physics-bg-wash.jpg") no-repeat scroll center center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0 2rem 0; }
+  figure.physics-shot img {
+    width: clamp(2rem, 80vw, 60rem);
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.75); }
+  figure.physics-shot figcaption {
+    width: clamp(2rem, 80vw, 60rem);
+    font-weight: 400;
+    font-size: clamp(0.5rem, 0.825vw, 1rem);
+    color: rgba(179, 180, 183, 0.75);
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    margin-top: 1rem; }
 
 img.gallery {
   width: 100%;

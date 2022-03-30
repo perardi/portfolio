@@ -3,10 +3,11 @@ $bodyBlue:              saturate(darken($baseBlue,15%),10%);
 $bodyBlueMid:           desaturate(darken($baseBlue,0%),10%);
 
 $bodyBlueLighter:       saturate(lighten($baseBlue,25%),05%);
+$bodyBlueLighterDark:   desaturate(darken($baseBlue,5%),05%);
 $bodyBlueBorder:        saturate(lighten($baseBlue,45%),05%);
-$greyBG:                desaturate(lighten($baseBlue,52.5%),02.5%);
+$greyBG:                desaturate(lighten($baseBlue,54%),02.5%);
 
-$greyBGNav:             rgba(desaturate(lighten($baseBlue,45%),05%),0.9);
+$greyBGNav:             rgba(desaturate(lighten($baseBlue,47.5%),05%),0.9);
 $greyBGNavDark:         rgba(desaturate(darken($baseBlue,35%),15%),0.9);
 
 // Begin dark theme stuff

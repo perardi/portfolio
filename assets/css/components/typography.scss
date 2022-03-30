@@ -3,7 +3,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     padding: 0;
     line-height: 1;
     font-size: 1rem;
-    color: $bodyBlue;
+    color: $bodyBlueDark;
     font-weight: 400;
   
     &.dark-mode {
@@ -13,13 +13,13 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
   
   a {
     text-decoration: none;
-    border-bottom: 1pt solid $bodyBlueLighter;
-    padding-bottom: 1pt;
-    color: $bodyBlue;
+    border-bottom: 1pt solid $bodyBlueLighterDark;
+    padding-bottom: 3pt;
+    color: $bodyBlueDark;
     transition: border-bottom 0.125s ease-in-out;
   
     &:hover {
-      border-bottom: 1pt solid $bodyBlue;
+      border-bottom: 1pt solid $bodyBlueDark;
     }
   }
 
@@ -30,11 +30,15 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     font-weight:      100;
     line-height:      1.25;
   
-    font-size:        clamp(1.875rem, 3.5vw, 3.75rem); 
+    font-size:        clamp(1.825rem, 3.125vw, 3.5rem); 
     margin-bottom:    $headlineMarginHero;
 
     display:          flex;
     flex-direction:   column;
+
+    &.home {
+      font-size:       clamp(2rem, 3.75vw, 3.0rem); 
+    }
     
     span {
       font-size:        clamp(1.0rem, 1.25vw, 2.0rem); 
@@ -47,12 +51,15 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
   }
   
   h2 {
-    font-weight:      300;
+    font-weight:      200;
     line-height:      1.25;
   
-    font-size:        clamp(1.25rem, 1.75vw, 2.25rem); 
+    font-size:        clamp(1.5rem, 2.125vw, 2.325rem); 
     margin-bottom:    $headlineMarginGlobal; 
   
+    &.home {
+      font-size:        clamp(1.375rem, 1.875vw, 2.125rem); 
+    }
   
     &.sarcasm {
       font-weight:    300;
@@ -61,12 +68,11 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
   }
   
   h3 {
-    font-weight:      500;
+    font-weight:      200;
     line-height:      1.25;
   
-    border-top:       1pt solid $bodyBlueBorder;
 
-    font-size:        clamp(1.0rem, 1.25vw, 2.0rem); 
+    font-size:        clamp(1.25rem, 1.5vw, 2.0rem);  
     margin-bottom:    $headlineMarginGlobal; 
     padding-top:      clamp(0.25rem, 0.5vw, 0.75rem);
   }
@@ -104,14 +110,58 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     font-weight:      400;
     line-height:      1.75;
   
-    font-size:        clamp(0.75rem, 1.0vw, 1.5rem);
+    font-size:        clamp(1rem, 1.125vw, 1.325rem);
     margin-bottom:    $headlineMarginGlobal;
+
+    em {
+      font-style:     italic;
+      opacity:        0.8;
+    }
+
+    &.portfolio-intro {
+      font-size:        clamp(1.25rem, 1.325vw, 1.5rem);
+      font-weight:      350;
+    }
   
       &.sarcasm {
         font-style:   italic;
         font-weight:  300;
         font-size:    clamp(0.6875rem, 0.9375vw, 1.1875rem);
         opacity:      0.75;
+    }
+
+    &.home {
+      font-size:        clamp(1rem, 1.375vw, 1.5rem);
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    li {
+      font-weight:      400;
+      line-height:      1.75;
+    
+      font-size:        clamp(1rem, 1.125vw, 1.325rem);
+      margin-bottom:    $headlineMarginGlobal;
+
+      position: relative;
+
+      &::before {
+        content: "\2012";
+        position: absolute;
+        left: -1.25rem;
+        opacity: 0.5;
+      }
+
+      ul {
+        margin-left: 1rem;
+
+        li {
+          &::before {
+            opacity: 0.25;
+          }
+        }
+      }
     }
   }
 
