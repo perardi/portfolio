@@ -37,15 +37,15 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     flex-direction:   column;
 
     &.home {
-      font-size:       clamp(2rem, 3.75vw, 3.0rem); 
+      font-size:       clamp(1.5rem, 4vw, 3.0rem); 
     }
     
     span {
       font-size:        clamp(1.0rem, 1.25vw, 2.0rem); 
     text-transform:   uppercase;
     font-weight:      300;
-    letter-spacing:   0.5pt;
-    opacity:          0.7;
+    letter-spacing:   1pt;
+    opacity:          0.5;
     line-height:      1;
     }
   }
@@ -58,7 +58,8 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     margin-bottom:    $headlineMarginGlobal; 
   
     &.home {
-      font-size:        clamp(1.375rem, 1.875vw, 2.125rem); 
+      font-size:        clamp(1.125rem, 1.875vw, 2.125rem); 
+      line-height:      1.5;
     }
   
     &.sarcasm {
@@ -99,12 +100,11 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
   }
 
   h5 {
-      font-weight:      500;
+      font-weight:      400;
       line-height:      1.25;
   
       font-size:        clamp(0.75rem, 1.0vw, 1.5rem);
       margin-bottom:    $headlineMarginGlobal;
-      margin-top:       clamp(-0.5rem, -0.75vw, -1.0rem);
       color:            desaturate(lighten($baseBlue,10%),05%);
   }
   
@@ -123,6 +123,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     &.portfolio-intro {
       font-size:        clamp(1.125rem, 1.25vw, 1.625rem);
       font-weight:      350;
+      line-height: 1.9;
     }
   
       &.sarcasm {
@@ -133,12 +134,23 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     }
 
     &.home {
-      font-size:        clamp(1rem, 1.375vw, 1.5rem);
+      font-size:        clamp(0.9375rem, 1.375vw, 1.5rem);
     }
   }
 
   ul {
     list-style-type: none;
+
+    &.constraint-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+    }
+
+    &.tangent {
+      margin-top: 1rem;
+    }
+
     li {
       font-weight:      400;
       line-height:      1.75;
@@ -146,11 +158,48 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
       font-size:        clamp(1rem, 1.125vw, 1.325rem);
       margin-bottom:    $headlineMarginGlobal;
 
+      a.footie {
+        border: none;
+        font-size: 65%;
+        font-style: italic;
+        opacity:        0.8;
+        display: inline-block;
+        transform: translateY(-0.5rem);
+      }
+
+      &.footnote {
+        font-style: italic;
+        opacity:        0.8;
+        font-size:        clamp(0.625rem, 0.75vw, 1.0rem);
+        display: inline-flex;
+
+        a {
+          border: none;
+          position: absolute;
+          width: 1rem;
+          height: 1rem;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          left: -1rem;
+          font-size: 75%;
+        }
+
+        &::before {
+          display: none;
+        }
+      }
+
       position: relative;
 
       em {
         font-style:     italic;
         opacity:        0.8;
+      }
+
+      strong {
+        font-weight: 600;
       }
 
       &::before {
@@ -162,6 +211,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 
       ul {
         margin-left: 1rem;
+        margin-top: 0.5rem;
 
         li {
           &::before {

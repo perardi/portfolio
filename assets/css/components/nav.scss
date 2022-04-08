@@ -1,73 +1,96 @@
 nav {
-    position: fixed;
-    z-index: 10;
-    bottom: 0;
-    height: clamp(3rem, 3.5vw, 4rem);
-    background-color: $greyBGNavDark;
-    -webkit-backdrop-filter: blur(2pt) grayscale(100%);
-    backdrop-filter: blur(2pt grayscale(100%));
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    position:               fixed;
+    z-index:                10;
+    bottom:                 0;
+    height:                 clamp(2.75rem, 3.25vw, 3.25rem);
+    background-color:       $greyBGNavDark;
+    -webkit-backdrop-filter: blur(6pt) grayscale(100%);
+    backdrop-filter:        blur(6pt grayscale(100%));
+    width:                  100%;
+    display:                flex;
+    flex-direction:         row;
+    align-items:            center;
+    justify-content:        center;
+    flex-wrap:              nowrap;
 
-    -webkit-overflow-scrolling: touch;
-  &::-webkit-scrollbar {
-    display: none;
+    @include breakpoint(baby-bear) {
+      justify-content: flex-start;
+
+      ul {
+        &:first-of-type {
+          padding-left: 1rem;
+        }
+        &:last-of-type {
+          padding-right: 1rem;
+        }
+      }
   }
+    overflow-x:             auto; 
+    gap:                    calc(2rem + 1pt);
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+    display:                none;
+    }
 
     ul {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0 1.5rem;
+      display:            flex;
+      flex-direction:     row;
+      align-items:        center;
+      gap:                0.75rem;
+      height:             clamp(2.75rem, 3.25vw, 3.25rem);
+      position: relative;
 
-      @include breakpoint(baby-bear) {
-        padding: 0 1rem;
+      &:last-of-type {
+        &:before {
+          content: '';
+          position: absolute;
+          width: 1pt;
+          height: 100%;
+          left: -1rem;
+          background: linear-gradient(0deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+        }
       }
+
+    
 
       &.port-links {
         
         span {
-          color: $bodyBlueDark;
-          margin-left: auto;
+          color:        $bodyBlueDark;
+          display:        flex;
+        flex-direction: row;
+        align-items:    center;
+          margin-left:  auto;
           text-transform: uppercase;
-          line-height: 1;
-          font-size:        clamp(0.5rem, 0.75vw, 1rem);
-              color: rgba($color: $bodyBlueDark, $alpha: 0.5);
-              letter-spacing: 0.5pt;
+          line-height:  1;
+          font-size:    clamp(0.5rem, 0.75vw, 1rem);
+          color:        rgba($color: $bodyBlueDark, $alpha: 0.5);
+          letter-spacing: 0.5pt;
         }
       }
   
       li {
-        margin: 0;
-        line-height: 1;
-        display: flex;
+        margin:         0;
+        line-height:    1;
+        display:        flex;
         flex-direction: row;
-        align-items: center;
-        text-transform: up;
+        align-items:    center;
 
     
 
         a {
-          margin: 0;
-          padding: 0;
-          border: none;
-          line-height: 1;
-          font-size:        clamp(0.625rem, 1vw, 1rem);
-      color: rgba($color: $bodyBlueDark, $alpha: 0.75);
-      white-space: nowrap;
-      text-overflow: ellipsis;
+          margin:           0;
+          padding:          0;
+          border:           none;
+          line-height:      1;
+          font-size:        clamp(0.625rem, 1vw, 0.875rem);
+          color:            rgba($color: $bodyBlueDark, $alpha: 0.75);
+          white-space:      nowrap;
+          text-overflow:    ellipsis;
 
-      
-
-      &:hover {
-        border: none;
-      }
+          &:hover {
+            border: none;
+          }
         }
 
         &::before {

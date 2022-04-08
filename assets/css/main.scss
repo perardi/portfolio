@@ -45,19 +45,18 @@ body {
 
   &:after {
     content: '';
-    width: 100vw;
-    height: 100vh;
-    background-color: $baseBlue;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0%;
-    z-index: 0;
-    display: none;
+    z-index: 1;
 
-    mix-blend-mode: multiply;
-    opacity: 0.10;
-    animation: grain 0.4s steps(1) infinite;
-    background-image: url("../img/noise-256w.png");
+    mix-blend-mode: soft-light;
+    opacity: 0.5;
+    // animation: grain 0.4s steps(1) infinite;
+    background-image: url('../img/noise-256w.png');
+    display: none;
     @keyframes grain {
       0%,
       100% {
@@ -85,7 +84,7 @@ main {
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
   &.home {
     display: flex;
@@ -109,8 +108,14 @@ section {
     }
     
     &.bosco {
+      width: clamp(2rem, 80vw, 50rem);
+      align-items: flex-start;
+      
+      
+      
       h3 {
-        margin-top: 1.5rem
+        margin-top: 1.5rem;
+        font-size:        clamp(1.25rem, 2vw, 2.5rem); 
       }
     }
 }
@@ -141,7 +146,7 @@ figure {
     color:          rgba($color: $bodyBlueDark, $alpha: 0.75);
     text-transform: uppercase;
     letter-spacing: 1pt;
-    margin-top:     1rem;
+    margin-bottom:  0.5rem;
   }
 
   &.hero {
@@ -153,25 +158,167 @@ figure {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0 2rem 0;
+    padding: 0rem 0 0rem 0;
+    box-shadow: 0 0 2rem 0 rgba($color: #000000, $alpha: 0.35);
+    overflow: hidden;
+
+    &.plot-hero {
+      background: #000 url('../img/mm-bg-wash.jpg') no-repeat scroll center center;
+    background-size: cover;
+    }
+
+    &.spikey-hero {
+      background: #000 url('../img/alpha-bg-wash.jpg') no-repeat scroll center center;
+    background-size: cover;
+    }
+
+    &.physics-hero {
+      background: #000 url('../img/physics-bg-wash.jpg') no-repeat scroll center center;
+    background-size: cover;
+    }
+
+    &.physics-super-hero {
+      background: #000 url('../img/physics-bg.jpg') no-repeat scroll center center;
+      background-size: cover;
+      padding: 2rem 0;
+
+      img {
+        box-shadow: none;
+        width: 25%;
+        min-width: 12rem;
+      }
+    }
+
+    .hero-grid-three {
+      width:          clamp(2rem, 90vw, 64rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 2.5rem 0 0 0;
+
+      .left-hero {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 0 1.5rem 0 rgba($color: #000000, $alpha: 0.75);
+      }
+
+      .mid-hero {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 0 1.5rem 0 rgba($color: #000000, $alpha: 0.75);
+      }
+
+      .right-hero {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 0 1.5rem 0 rgba($color: #000000, $alpha: 0.75);
+      }
+
+      img {
+        width: 100%;
+        box-shadow: none;
+      }
+
+      p {
+        margin: 0;
+        padding: 2rem 0;
+        line-height: 1.2;
+        color: $greyBGDark;
+        opacity: 0.5;
+      }
+
+    }
+
+    .hero-grid {
+      width:          clamp(2rem, 90vw, 64rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 2.5rem 0 0 0;
+
+      .left-hero {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 0 1.5rem 0 rgba($color: #000000, $alpha: 0.75);
+
+        &.chiral {
+          transform: scale(1.1);
+        }
+      }
+
+      .right-hero {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-shadow: 0 0 2rem 0 rgba($color: #000000, $alpha: 0.75);
+
+        &.chiral {
+          transform: scale(1.1);
+        }
+      }
+
+      img {
+        width: 100%;
+        box-shadow: none;
+      }
+    }
+
+    p {
+      margin: 0;
+      padding: 2rem 0;
+      line-height: 1.2;
+      color: $greyBGDark;
+      opacity: 0.5;
+    }
   }
 
-  &.physics-hero {
-    background: transparent url('../img/physics-bg.jpg') no-repeat scroll center center;
-    background-size: cover;
-    width: 100%;
-    height: 25vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
+  &.mobile-hero {
     img {
-      height: 75%;
-      width: auto;
+      width:          clamp(2rem, 40vw, 54rem);
       box-shadow: none;
     }
   }
+
+  &.mm-hero {
+
+    img {
+      width:          clamp(2rem, 90vw, 54rem);
+      box-shadow:     none;
+    }
+
+    div {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #68568a;
+
+      img {
+        width:          clamp(2rem, 90vw, 54rem);
+      box-shadow: none;
+      }
+    }
+  }
+
+
 
   &.physics-shot {
     background: #fff url('../img/physics-bg-wash.jpg') no-repeat scroll center center;
@@ -182,9 +329,9 @@ figure {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0 2rem 0;
-
-
+    padding: 2rem 0 0rem 0;
+    overflow: hidden;
+    box-shadow: 0 0 2rem 0 rgba($color: #000000, $alpha: 0.35);
   }
 
 }
@@ -196,4 +343,11 @@ img.gallery {
   box-shadow:       0 0.5rem 1.5rem 0 rgba($color: #000000, $alpha: 0.25);
 
 
+}
+
+img.bosco {
+  width: 100%;
+  margin-top:       clamp(1rem, 2vw, 2rem); 
+  margin-bottom:    clamp(1rem, 2vw, 2rem); 
+  box-shadow:       0 0.5rem 1.5rem 0 rgba($color: #000000, $alpha: 0.25);
 }

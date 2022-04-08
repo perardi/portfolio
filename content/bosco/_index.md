@@ -6,13 +6,9 @@ title: Bosco Cheat Sheet
 
 ### Dates & Times
 
-My car rental starts at…lol, nope. My trip got cancelled.
+My car rental starts at **noon, Friday April 8th**, though I have plenty of flex time there to pick it up.
 
-But to take a break and shake off whatever illness I have, I will board Bosco from **Wednesday, December 22 through Monday, December 27**. 
-
-We can have you pick him up at **10am on Wednesday**.
-
-I will now pick him up earlier than expected on Monday, though. Like 10am.
+My car **has** to be back by **5pm, Monday April 11**, so realistically I'll have to pick up Bosco sometime after then.
 
 ### Emergency Contact Numbers
 
@@ -20,30 +16,30 @@ My primary contact number is:
 
 **309-634-6862**
 
+### Walking Time Request
+
+Your schedule is your schedule, but he's used to seeing Sasha and Jackson in Margate Park there right north of the field house at **noon**. So if you can somehow get him out there, you then basically don't have to walk him, as he'll run around.
+
+Also if he constantly stops while in the park and looks like he's looking for something: he's looking for Sasha and Jackson.
+
 ### Food
 
-I’ll be providing an entire bag of Purina Pro Plan.
+**2 bags** of food, **twice a day**.
 
-He eats…well, he should be eating **4 total cups per day**, or **2 cups at breakfast** and **2 cups at dinner**. However I tend to bribe him with treats if I’m gone for a chunk of the day, so sometimes I scale that down.
+He's being a bastard about food. I put him on a diet, because I was giving him too many treats. And by "treats" I mean cheese. So now he seems to be protesting by not eating his kibble until the evening.
 
-Perhaps more important is the timing. He really likes to eat between **7am to 8am**, and then **5pm to 6pm**.
+So don't be too alarmed. His yearly check-up was a week ago, came back flawless, and he devours treats, I think he's just being stubborn in the hopes I'll give him cheese.
 
 ### Treats
 
 I usually give him one of the **dental treat sticks** after our morning walk.
 
-And if he really wants more food, I give him one of the **Purina Busy Bones**. Which you’d hope would distract him for a long time, but no.
-
 ### Toys
 
-I am going to give you his orange ball, as he likes to chase that. Or you can distract him with that if he’s a bastard.
-
-And I'm going to throw a bone in the bag. He likes to chew on that.
+I am going to give you his orange ball, as he likes to chase that. As does Jackson.
 
 ### Leash, Collar, and Harness
 
-He has had a little irritation under his arms from, seemingly, the harness, so I’ve mostly been using just a collar.
+Try not to leave his harness anywhere near chewing reach.
 
-But, he’s horribly strong, and much easier to control using that harness. So by all means, use the harness. Just try to pop it off him when you get home, and if you go to the dog park, maybe have the collar and harness, and take the harness off.
-
-Oh, and I'll be including the light-up collar. It’s easier for people to see him coming at night.
+Learned that over Thanksgiving.

@@ -1,15 +1,24 @@
 section.resume {
-    width:                          clamp(2rem, 80vw, 52rem);
+    width:                          clamp(2rem, 80vw, 54rem);
     display:                        grid;
     grid-template-columns:          30% 60%;
     grid-gap:                       0 10%;
-    align-items: start;
+    align-items:                    start;
+
+    @include breakpoint(baby-bear) {
+        grid-template-columns:     1fr;
+        grid-gap:                   0;
+    }
 
     .resume-intro {
       grid-column:                  1 / span 2;
     }
 
     aside {
+
+        @include breakpoint(baby-bear) {
+            grid-row: 3;
+        }
 
         ul {
             list-style-type:        none;

@@ -380,18 +380,16 @@ body {
     background-color: #1c1c1c; }
   body:after {
     content: '';
-    width: 100vw;
-    height: 100vh;
-    background-color: #616670;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0%;
-    z-index: 0;
-    display: none;
-    mix-blend-mode: multiply;
-    opacity: 0.10;
-    animation: grain 0.4s steps(1) infinite;
-    background-image: url("../img/noise-256w.png"); }
+    z-index: 1;
+    mix-blend-mode: soft-light;
+    opacity: 0.5;
+    background-image: url("../img/noise-256w.png");
+    display: none; }
 
 @keyframes grain {
   0%,
@@ -412,7 +410,7 @@ main {
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 1; }
+  z-index: 2; }
   main.home {
     display: flex;
     align-items: center;
@@ -508,11 +506,10 @@ h4 {
     font-size: clamp(0.6275rem, 0.825vw, 1.25rem); }
 
 h5 {
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.25;
   font-size: clamp(0.75rem, 1vw, 1.5rem);
   margin-bottom: clamp(0.375rem, 0.875vw, 0.875rem);
-  margin-top: clamp(-0.5rem, -0.75vw, -1rem);
   color: #7f8185; }
 
 p {
@@ -563,15 +560,15 @@ nav {
   position: fixed;
   z-index: 10;
   bottom: 0;
-  height: clamp(3rem, 3.5vw, 4rem);
-  background-color: rgba(15, 15, 15, 0.9);
-  -webkit-backdrop-filter: blur(2pt) grayscale(100%);
-  backdrop-filter: blur(2pt grayscale(100%));
+  height: clamp(2.75rem, 3.25vw, 3.25rem);
+  background-color: rgba(28, 28, 28, 0.45);
+  -webkit-backdrop-filter: blur(6pt) grayscale(100%);
+  backdrop-filter: blur(6pt grayscale(100%));
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; }
@@ -582,7 +579,10 @@ nav {
     flex-direction: row;
     align-items: center;
     gap: 0.75rem;
-    padding: 0 1.5rem; }
+    padding: 0 1.5rem;
+    height: clamp(2.75rem, 3.25vw, 3.25rem); }
+    nav ul:last-of-type {
+      border-left: 1pt solid rgba(179, 180, 183, 0.25); }
     @media (max-width: 650px) {
       nav ul {
         padding: 0 1rem; } }
@@ -599,14 +599,13 @@ nav {
       line-height: 1;
       display: flex;
       flex-direction: row;
-      align-items: center;
-      text-transform: up; }
+      align-items: center; }
       nav ul li a {
         margin: 0;
         padding: 0;
         border: none;
         line-height: 1;
-        font-size: clamp(0.625rem, 1vw, 1rem);
+        font-size: clamp(0.625rem, 1vw, 0.875rem);
         color: rgba(179, 180, 183, 0.75);
         white-space: nowrap;
         text-overflow: ellipsis; }
@@ -616,13 +615,20 @@ nav {
         display: none; }
 
 section.resume {
-  width: clamp(2rem, 80vw, 52rem);
+  width: clamp(2rem, 80vw, 54rem);
   display: grid;
   grid-template-columns: 30% 60%;
   grid-gap: 0 10%;
   align-items: start; }
+  @media (max-width: 650px) {
+    section.resume {
+      grid-template-columns: 1fr;
+      grid-gap: 0; } }
   section.resume .resume-intro {
     grid-column: 1 / span 2; }
+  @media (max-width: 650px) {
+    section.resume aside {
+      grid-row: 3; } }
   section.resume aside ul {
     list-style-type: none;
     margin-bottom: clamp(1rem, 1.5vw, 1.75rem); }
@@ -655,7 +661,7 @@ figure figcaption {
   color: rgba(179, 180, 183, 0.75);
   text-transform: uppercase;
   letter-spacing: 1pt;
-  margin-top: 1rem; }
+  margin-bottom: 0.5rem; }
 
 figure.hero {
   background: #fff url("") no-repeat scroll center center;
@@ -666,7 +672,67 @@ figure.hero {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0 2rem 0; }
+  padding: 0rem 0 0rem 0;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.35);
+  overflow: hidden; }
+  figure.hero.plot-hero {
+    background: #000 url("../img/mm-bg-wash.jpg") no-repeat scroll center center;
+    background-size: cover; }
+  figure.hero.spikey-hero {
+    background: #000 url("../img/alpha-bg-wash.jpg") no-repeat scroll center center;
+    background-size: cover; }
+  figure.hero .hero-grid {
+    width: clamp(2rem, 90vw, 60rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 0 0 0; }
+    figure.hero .hero-grid .left-hero {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.5);
+      margin-right: -1rem; }
+      figure.hero .hero-grid .left-hero.chiral {
+        margin-top: 1rem; }
+    figure.hero .hero-grid .right-hero {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.25);
+      margin-left: -1rem;
+      margin-top: 1rem; }
+      figure.hero .hero-grid .right-hero.chiral {
+        margin-top: 0; }
+    figure.hero .hero-grid img {
+      width: 100%;
+      box-shadow: none; }
+  figure.hero p {
+    margin: 0;
+    padding: 2rem 0;
+    line-height: 1.2;
+    color: #1c1c1c;
+    opacity: 0.5; }
+
+figure.mm-hero img {
+  width: clamp(2rem, 90vw, 54rem);
+  box-shadow: none; }
+
+figure.mm-hero div {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #68568a; }
+  figure.mm-hero div img {
+    width: clamp(2rem, 90vw, 54rem);
+    box-shadow: none; }
 
 figure.physics-hero {
   background: transparent url("../img/physics-bg.jpg") no-repeat scroll center center;
@@ -691,7 +757,9 @@ figure.physics-shot {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0 2rem 0; }
+  padding: 2rem 0 0rem 0;
+  overflow: hidden;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.35); }
 
 img.gallery {
   width: clamp(2rem, 80vw, 64rem);

@@ -8,7 +8,7 @@ $bodyBlueBorder:        saturate(lighten($baseBlue,45%),05%);
 $greyBG:                desaturate(lighten($baseBlue,54%),02.5%);
 
 $greyBGNav:             rgba(desaturate(lighten($baseBlue,47.5%),05%),0.9);
-$greyBGNavDark:         rgba(desaturate(darken($baseBlue,35%),15%),0.9);
+$greyBGNavDark:         rgba(desaturate(darken($baseBlue,30%),10%),0.45);
 
 // Begin dark theme stuff
 $greyBGDark:            desaturate(darken($baseBlue,30%),10%);

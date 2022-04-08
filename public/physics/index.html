@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Wolfram Physics Project</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,7 +12,7 @@
 
 
   
-  <link rel="stylesheet" href="https://perardi.github.io/portfolio/css/main.6c7a9931da9488d2b75b05cf7740679a804e25ada5769316a6f4d4b9d6338b0c.css">
+  <link rel="stylesheet" href="https://perardi.github.io/portfolio/css/main.8fc8fc3479688f6b972be762375032424012ccd6ea7665c301926f268dabfd9f.css">
 
 
   <meta name="theme-color" content="#cbcdd2">
@@ -35,51 +35,73 @@
         Wolfram Physics Project</h1>
 </article>
 
-<figure class="physics-hero">
+<figure class="hero physics-super-hero">
     <img src="../img/physics-logo.svg" alt="Wolfram Physics Project">
 </figure>
 
 <article>
     <h2>The Project</h2>
 
-    <p class="portfolio-intro">The <a href="https://www.wolframphysics.org">Wolfram Physics Project</a> is…well, that&rsquo;s what made this a design challenge. This is a theoretical physics framework based off the CEO&rsquo;s <a href="https://www.wolframscience.com/nks/">long-standing personal research project</a> into cellular automata. In short&hellip;in as much as I can understand it and summarize it&hellip;it is an exploration of how complex physical phenomena can evolve from relatively simple initial conditions and computational rules. <em>(<a href="https://writings.stephenwolfram.com/2020/04/finally-we-may-have-a-path-to-the-fundamental-theory-of-physics-and-its-beautiful/">The boss summarizes it here</a>. There&rsquo;s really quite a lot of graph theory.)</em></p>
+    <p class="portfolio-intro">The <a href="https://www.wolframphysics.org">Wolfram Physics Project</a> is…well, that&rsquo;s what made this a design challenge. This is a theoretical physics framework based off the CEO&rsquo;s <a href="https://www.wolframscience.com/nks/">long-standing personal research project</a> into cellular automata. In short&hellip;in as much as I can understand it and summarize it&hellip;it is an exploration of how complex physical phenomena can evolve from relatively simple initial conditions and computational rules.</p> 
+        
+        <p class="portfolio-intro"><em>(<a href="https://writings.stephenwolfram.com/2020/04/finally-we-may-have-a-path-to-the-fundamental-theory-of-physics-and-its-beautiful/">The boss summarizes it here</a>. There&rsquo;s really quite a lot of graph theory.)</em></p>
+
+    <p class="portfolio-intro">This was a rapidly evolving design project to launch a signifcant web presence for this material, encompassing a wide variety of designs, including an online book, an archival materials file browser, and research gallery views.</p>
 </article>
 
 <figure class="physics-shot">
     <img src="../img/physics-home.jpg" alt="Wolfram Physics Home Page">
-    <figcaption>Wolfram Physics home page</figcaption>
 </figure>
 
 <article>
     <h2>The Goals</h2>
 
     <ul>
-        <li>Create a robust design system that allowed easy iteration and quick hand-off to developers.</li>
-        <li>Craft an web-based page interface for a presentation of the ebook of this content.</li>
-        <li>Design a gallery of graphs and models of cellular automata and network systems.</li>
-        <li>Fashion an online file system showing the historical development of this material.</li>
+        <li><strong>Communicate.</strong> Make a visually attractive site to present this physics theory, balancing the academic content with a bold and color visual design.</li>
+        <li><strong>Systematize.</strong> Create a robust design system that allowed quick hand-off to developers.</li>
+        <li><strong>Iterate.</strong> Develop a design pipeline to rapidly iterate on constantly evolving incoming content.</li>
+        
     </ul>
 </article>
 
-<figure class="physics-shot">
-    <img src="../img/physics-registry.jpg" alt="Wolfram Physics Model Registry">
-    <figcaption>Wolfram Physics Model Registry</figcaption>
+<figure class="hero physics-hero">
+    <div class="hero-grid">
+        <div class="left-hero chiral">
+            <img src="../img/physics/registry.jpg" alt="Registry">
+        </div>
+        <div class="right-hero">
+            <img src="../img/physics/summary.jpg" alt="Summary">
+        </div>
+    </div>
 </figure>
 
 <article>
     <h2>The Constraints</h2>
 
     <ul>
-        <li>The project&rsquo;s content was technical. Very technical. <em>(I have a perfunctory knowledge of general & special relativity, quantum mechanics, and cosmology, but once you get to causal invariance in graph theory, I shrug epistemically.)</em></li>
-        <li>
-            &hellip;oh, and we started this project in March 2020. As the COVID pandemic began in earnest. That was a constraint for sure. <em>(Fortunately we were already a heavily remote work-centric company.)</em>
+        <li><strong>Subject Knowledge.</strong> The project&rsquo;s content was technical. Very technical. I had to rely on fundamental design principles and the ability to research and adapt to challenging content to adapt on the fly to present the material.<a class="footie" href="#cf1">1</a></li>
+        <li id="c1">
+            <strong>Challenging Project Conditions.</strong> We started this project in March 2020. As the COVID pandemic began in earnest. Though we were already a heavily remote work-centric company, moving the entire workforce to work-from-home was not without friction.
+        </li>
+    </ul>
+
+    <ul class="tangent">
+        <li class="footnote" id="cf1">
+            <a href="#c1">1</a>
+            (I have a perfunctory knowledge of general & special relativity, quantum mechanics, and cosmology, but once you get to causal invariance in graph theory, I shrug epistemically.)
         </li>
     </ul>
 </article>
 
-<figure class="physics-shot">
-    <img src="../img/physics-files.jpg" alt="Wolfram Physics File Archive">
-    <figcaption>Wolfram Physics Working Materials Archive</figcaption>
+<figure class="hero physics-hero">
+    <div class="hero-grid">
+        <div class="left-hero">
+            <img src="../img/physics/archives.jpg" alt="Archives">
+        </div>
+        <div class="right-hero chiral">
+            <img src="../img/physics/book.jpg" alt="Book">
+        </div>
+    </div>
 </figure>
 
 <article>
@@ -87,15 +109,22 @@
 
 <ul>
     <li>
-        The design of the site involved heavy use of in-browser prototyping, using a static site generator, as well as HTML/CSS/JS written by me. This allowed me to iterate rapidly based off evolving and incoming content, and produced deliverables that were immediately ready for our web team to deploy.
+        <strong>Prototyping.</strong> The design of the site involved heavy use of in-browser prototyping, using a static site generator, as well as HTML/CSS/JS written by me. This allowed me to iterate rapidly based off evolving and incoming content, and produced deliverables that were immediately ready for our web team to deploy. Let&rsquo;s walk through how some of the key technologies helped me get this project live&hellip;
 
         <ul>
-            <li>A key example: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid">CSS grid</a>. Our web team had never utilized CSS grid at all, in any capacity. But, it was extremely useful for several aspects of this site, and by providing CSS to our developers, we rapidly deployed this to the world without significant re-styling to use older techniques.</li>
+            <li><strong>CSS Grid.</strong> Our web team had never utilized <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid">CSS grid</a> in any capacity. But, it was extremely useful for several aspects of this site, and by providing CSS/SCSS to our developers, we rapidly deployed this without significant re-styling and re-structuring using older techniques. <em></em></li>
+            <li><strong>Variables and Well-Formed SVGs.</strong> I specifically prototyped and designed this using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS color variables</a> to keep the styles consistent throughout the site, and made sure all of my assets were SVGs with well-formed internal DOMs so we could iterate and play with colors without painful manual regeneration of every graphics asset.</li>
+            <li><strong>Static Site Generators.</strong> I leaned heavily into my <a href="https://gohugo.io">static site generator of choice</a> to create functional prototypes of complex parts of the site, including <a href="https://www.wolframphysics.org/archives/index/">what amounts to</a> a full web-based file browser, to help demonstrate the feasibility of such features to stakeholders and developers.</li>
         </ul>
     </li>
     <li>
-        The development of the style and content presentation was a result of many, many meetings with stakeholders, including the CEO and his physics team, which required a rapid uptake of the technical material. And, as noted in the constraints, the bulk of this process took place during the initial wave of the pandemic, which, as one might imagine, necessitated flexiblity with dealing with the <em>interesting</em> nature of the time.
+        <strong>Team Communication.</strong> As is somewhat obvious from my hand-waving introduction to the material, this is fairly esoteric stuff. The development of the style and content presentation was a result of many, many meetings with stakeholders, including the CEO and his physics team, which required a rapid uptake of the technical material.
     </li>
+
+    <ul class="tangent">
+        <li class="footnote"><a href="#c2">2</a> No. More. Floats. Ever.</li>
+        <li class="footnote"><a href="#c3">3</a> Big fan of the Hugo static site generator&mdash;very powerful functionality that lives in a single binary, so I can have the power of a real web development framework without a leaning tower of Ruby or node.js.</li>
+    </ul>
 </ul>
 </article> 
 
