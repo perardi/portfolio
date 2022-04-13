@@ -437,6 +437,15 @@ section {
 article {
   width: clamp(2rem, 80vw, 44rem);
   padding: 2.5rem 0 2.5rem 0; }
+  article.resume-intro h3 {
+    font-weight: 300;
+    line-height: 1.5;
+    margin-top: -0.5rem;
+    font-size: clamp(1.125rem, 1.25vw, 1.75rem);
+    padding-top: clamp(0.25rem, 0.5vw, 0.75rem);
+    max-width: 75%;
+    font-style: italic;
+    opacity: 0.75; }
   article.intro {
     padding: 2.5rem 0 0 0;
     width: 100%;
@@ -494,17 +503,78 @@ article {
     height: 60vh;
     overflow: hidden;
     position: relative; }
+    @media (max-width: 1025px) {
+      article.mobile-intro {
+        height: 40vh; } }
     article.mobile-intro .sub-container {
       position: absolute;
       z-index: 0;
       width: 100%;
-      height: 100%;
+      height: 60vh;
       display: grid;
       grid-template-columns: 1fr 1fr; }
-      article.mobile-intro .sub-container .right {
-        background: transparent url("../img/mobile/pad-one.jpg") no-repeat scroll top left;
-        background-size: contain;
-        transform: rotate(5deg); }
+      @media (max-width: 1025px) {
+        article.mobile-intro .sub-container {
+          height: 60vh; } }
+      @media (max-width: 960px) {
+        article.mobile-intro .sub-container {
+          height: 40vh; } }
+      article.mobile-intro .sub-container .left {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end; }
+        @media (max-width: 650px) {
+          article.mobile-intro .sub-container .left {
+            grid-column: 2;
+            justify-content: flex-end;
+            margin-right: -10%; } }
+        article.mobile-intro .sub-container .left .phone-container {
+          overflow: hidden;
+          height: 45%;
+          margin-top: 32.5%;
+          margin-right: 5%;
+          border-radius: 27px;
+          border: 3pt solid #4f4f4f;
+          aspect-ratio: 0.528;
+          background: #000 url("../img/mobile/phone-one.jpg") no-repeat scroll center center;
+          background-size: cover;
+          transform: rotate(5deg);
+          box-shadow: 0 0 1.5rem 0 rgba(28, 28, 28, 0.25); }
+          @media (max-width: 960px) {
+            article.mobile-intro .sub-container .left .phone-container {
+              border-radius: 16px;
+              border: 2pt solid #4f4f4f; } }
+          @media (max-width: 650px) {
+            article.mobile-intro .sub-container .left .phone-container {
+              border-radius: 9px;
+              border: 2pt solid #4f4f4f;
+              margin-top: -10%;
+              height: 100%; } }
+      @media (max-width: 650px) {
+        article.mobile-intro .sub-container .right {
+          display: none; } }
+      article.mobile-intro .sub-container .right .pad-container {
+        overflow: hidden;
+        height: 60%;
+        margin-top: -1rem;
+        border-radius: 32pt;
+        border: 4pt solid #4f4f4f;
+        aspect-ratio: 3 / 4;
+        background: #4f4f4f url("../img/mobile/pad-one.jpg") no-repeat scroll center center;
+        background-size: cover;
+        transform: rotate(5deg);
+        box-shadow: 0 0 2rem 0 rgba(28, 28, 28, 0.25); }
+        @media (max-width: 960px) {
+          article.mobile-intro .sub-container .right .pad-container {
+            border-radius: 24px;
+            border: 2pt solid #4f4f4f; } }
+        @media (max-width: 650px) {
+          article.mobile-intro .sub-container .right .pad-container {
+            border-radius: 16px;
+            border: 2pt solid #4f4f4f; } }
+        article.mobile-intro .sub-container .right .pad-container img {
+          width: 100%;
+          display: none; }
     article.mobile-intro .container {
       width: clamp(2rem, 80vw, 44rem);
       margin: 0 auto;
@@ -598,7 +668,7 @@ h5 {
   font-size: clamp(0.75rem, 1vw, 1.5rem);
   margin-bottom: clamp(0.375rem, 0.875vw, 0.875rem);
   color: #7f8185;
-  margin-top: -2pt; }
+  margin-top: -4pt; }
 
 p {
   font-weight: 400;
@@ -611,7 +681,7 @@ p {
   p.portfolio-intro {
     font-size: clamp(1.125rem, 1.25vw, 1.625rem);
     font-weight: 350;
-    line-height: 1.9; }
+    line-height: 1.75; }
   p.photos-intro {
     font-size: clamp(1rem, 1.25vw, 1.625rem);
     font-weight: 350;
@@ -648,7 +718,7 @@ ul {
     ul li.footnote {
       font-style: italic;
       opacity: 0.8;
-      font-size: clamp(0.625rem, 0.75vw, 1rem);
+      font-size: clamp(0.5rem, 0.625vw, 0.75rem);
       display: inline-flex; }
       ul li.footnote a {
         border: none;
@@ -681,6 +751,10 @@ ul {
         width: 40%;
         padding-left: 2rem;
         margin-right: -10%; }
+        @media (max-width: 650px) {
+          ul li ul .sidebar {
+            padding-left: 1rem;
+            margin-right: 0; } }
         ul li ul .sidebar p {
           text-transform: uppercase;
           font-size: 0.75rem;
@@ -688,6 +762,9 @@ ul {
           opacity: 0.75;
           letter-spacing: 1pt; }
         ul li ul .sidebar img {
+          width: 100%;
+          box-shadow: 0 0 0.75rem 0 rgba(0, 0, 0, 0.75); }
+        ul li ul .sidebar video {
           width: 100%;
           box-shadow: 0 0 0.75rem 0 rgba(0, 0, 0, 0.75); }
       ul li ul li::before {
@@ -769,7 +846,7 @@ nav {
         display: none; }
 
 section.resume {
-  width: clamp(2rem, 80vw, 54rem);
+  width: clamp(2rem, 80vw, 64rem);
   display: grid;
   grid-template-columns: 30% 60%;
   grid-gap: 0 10%;
@@ -792,7 +869,8 @@ section.resume {
       font-size: clamp(0.75rem, 0.875vw, 1.25rem);
       margin-bottom: clamp(0.375rem, 0.875vw, 0.875rem); }
   section.resume .resume-body {
-    padding: 0; }
+    padding: 0;
+    width: auto; }
     section.resume .resume-body h3.bump {
       margin-top: clamp(1.5rem, 2vw, 2.5rem); }
     section.resume .resume-body ul {
@@ -800,7 +878,7 @@ section.resume {
       margin-bottom: clamp(1rem, 1.5vw, 1.75rem); }
       section.resume .resume-body ul li {
         font-weight: 400;
-        line-height: 1.5;
+        line-height: 1.6;
         font-size: clamp(0.75rem, 1vw, 1.5rem);
         margin-bottom: clamp(0.375rem, 0.875vw, 0.875rem); }
 

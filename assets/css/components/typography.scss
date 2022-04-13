@@ -106,7 +106,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
       font-size:        clamp(0.75rem, 1.0vw, 1.5rem);
       margin-bottom:    $headlineMarginGlobal;
       color:            desaturate(lighten($baseBlue,10%),05%);
-      margin-top: -2pt;
+      margin-top:       -4pt;
   }
   
   p {
@@ -124,7 +124,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     &.portfolio-intro {
       font-size:        clamp(1.125rem, 1.25vw, 1.625rem);
       font-weight:      350;
-      line-height: 1.9;
+      line-height:      1.75;
     }
     
     &.photos-intro {
@@ -177,7 +177,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
       &.footnote {
         font-style: italic;
         opacity:        0.8;
-        font-size:        clamp(0.625rem, 0.75vw, 1.0rem);
+        font-size:        clamp(0.5rem, 0.625vw, 0.75rem);
         display: inline-flex;
 
         a {
@@ -226,6 +226,11 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
           padding-left: 2rem;
           margin-right: -10%;
 
+          @include breakpoint(baby-bear) {
+            padding-left: 1rem;
+            margin-right: 0;
+          }
+
           p {
             text-transform: uppercase;
             font-size: 0.75rem;
@@ -238,6 +243,13 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
             width: 100%;
             box-shadow: 0 0 0.75rem 0 rgba($color: #000000, $alpha: 0.75);
           }
+
+          video {
+            width: 100%;
+            box-shadow: 0 0 0.75rem 0 rgba($color: #000000, $alpha: 0.75);
+          }
+
+         
         }
 
         li {

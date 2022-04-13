@@ -1,6 +1,20 @@
 article {
     width:                      $containerWidth;
     padding:                    $containerPad 0 $containerPad 0;
+
+    &.resume-intro {
+      h3 {
+        font-weight:      300;
+        line-height:      1.5;
+        margin-top:       -0.5rem;
+    
+        font-size:        clamp(1.125rem, 1.25vw, 1.75rem);  
+        padding-top:      clamp(0.25rem, 0.5vw, 0.75rem);
+        max-width:        75%;
+        font-style:       italic;
+        opacity: 0.75;
+      }
+    }
   
     &.intro {
       padding:                  $containerPad 0 0 0;
@@ -84,19 +98,102 @@ article {
       height:                   60vh;
       overflow:                 hidden;
       position:                 relative;
+
+      @include breakpoint(stepmom-bear) {
+        height: 40vh;
+      }
   
       .sub-container {
         position:               absolute;
         z-index:                0;
         width:                  100%;
-        height:                 100%;
+        height:                 60vh;
         display:                grid;
         grid-template-columns:  1fr 1fr;
+
+        @include breakpoint(stepmom-bear) {
+          height: 60vh;
+        }
+
+        @include breakpoint(mama-bear) {
+          height: 40vh;
+        }
+
+        .left {
+          display:              flex;
+          flex-direction: row;
+          justify-content: flex-end;
+
+          @include breakpoint(baby-bear) {
+            grid-column: 2;
+            justify-content: flex-end;
+            margin-right: -10%;
+          }
+
+          .phone-container {
+            overflow: hidden;
+            height: 45%;
+            margin-top: 32.5%;
+            margin-right: 5%;
+            border-radius: 27px;
+            border: 3pt solid desaturate(darken($baseBlue,10%),10%);
+
+            @include breakpoint(mama-bear) {
+              border-radius: 16px;
+              border: 2pt solid desaturate(darken($baseBlue,10%),10%);
+            }
+            @include breakpoint(baby-bear) {
+              border-radius: 9px;
+              border: 2pt solid desaturate(darken($baseBlue,10%),10%);
+              margin-top: -10%;
+              height: 100%;
+            }
+
+
+            
+            aspect-ratio: 0.528;
+            background: #000 url('../img/mobile/phone-one.jpg') no-repeat scroll center center;
+          background-size: cover;
+          transform: rotate(5deg);
+          box-shadow: 0 0 1.5rem 0 rgba($greyBGDark, 0.25);
+
+          }
+        }
+
   
         .right {
-          background:           transparent url('../img/mobile/pad-one.jpg') no-repeat scroll top left;
-          background-size:      contain;
-          transform:            rotate(5deg);
+
+          @include breakpoint(baby-bear) {
+            display: none;
+          }
+         
+          .pad-container {
+            overflow: hidden;
+            height: 60%;
+            margin-top: -1rem;
+            border-radius: 32pt;
+            border: 4pt solid desaturate(darken($baseBlue,10%),10%);
+            aspect-ratio: 3 / 4;
+            background: desaturate(darken($baseBlue,10%),10%) url('../img/mobile/pad-one.jpg') no-repeat scroll center center;
+          background-size: cover;
+          transform: rotate(5deg);
+          box-shadow: 0 0 2rem 0 rgba($greyBGDark, 0.25);
+
+          @include breakpoint(mama-bear) {
+            border-radius: 24px;
+            border: 2pt solid desaturate(darken($baseBlue,10%),10%);
+          }
+          @include breakpoint(baby-bear) {
+            border-radius: 16px;
+            border: 2pt solid desaturate(darken($baseBlue,10%),10%);
+          }
+
+            img {
+              width: 100%;
+              display: none;
+            }
+          }
+
         }
       }
   
@@ -116,6 +213,8 @@ article {
   
         .headliner {
           grid-column:          1 / span 1;
+
+         
         }
       }
   
