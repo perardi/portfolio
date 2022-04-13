@@ -3,43 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://perardi.github.io/portfolio/bosco/</loc>
+    <loc>https://perardi.github.io/portfolio/public/bosco/</loc>
   </url>
   
   <url>
-    <loc>https://perardi.github.io/portfolio/categories/</loc>
+    <loc>https://perardi.github.io/portfolio/public/categories/</loc>
   </url>
   
   <url>
-    <loc>https://perardi.github.io/portfolio/</loc>
+    <loc>https://perardi.github.io/portfolio/public/</loc>
   </url>
   
   <url>
-    <loc>https://perardi.github.io/portfolio/photography/</loc>
+    <loc>https://perardi.github.io/portfolio/public/photography/</loc>
   </url>
   
   <url>
-    <loc>https://perardi.github.io/portfolio/resume/</loc>
+    <loc>https://perardi.github.io/portfolio/public/resume/</loc>
   </url>
   
   <url>
-    <loc>https://perardi.github.io/portfolio/tags/</loc>
+    <loc>https://perardi.github.io/portfolio/public/tags/</loc>
   </url>
   
   <url>
-    <loc>https://perardi.github.io/portfolio/technical/</loc>
+    <loc>https://perardi.github.io/portfolio/public/technical/</loc>
   </url>
   
   <url>
-    <loc>https://perardi.github.io/portfolio/physics/</loc>
+    <loc>https://perardi.github.io/portfolio/public/physics/</loc>
   </url>
   
   <url>
-    <loc>https://perardi.github.io/portfolio/mathmode/</loc>
+    <loc>https://perardi.github.io/portfolio/public/mathmode/</loc>
   </url>
   
   <url>
-    <loc>https://perardi.github.io/portfolio/mobile/</loc>
+    <loc>https://perardi.github.io/portfolio/public/mobile/</loc>
   </url>
   
 </urlset>
