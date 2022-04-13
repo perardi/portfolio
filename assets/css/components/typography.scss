@@ -21,6 +21,17 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     &:hover {
       border-bottom: 1pt solid $bodyBlueDark;
     }
+
+    &.download-pdf {
+      border: none;
+      padding: 0;
+      font-size: 0.825rem;
+      opacity: 0.75;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   $headlineMarginGlobal: clamp(0.375rem, 0.875vw, 0.875rem);

@@ -608,6 +608,13 @@ a {
   transition: border-bottom 0.125s ease-in-out; }
   a:hover {
     border-bottom: 1pt solid #b3b4b7; }
+  a.download-pdf {
+    border: none;
+    padding: 0;
+    font-size: 0.825rem;
+    opacity: 0.75; }
+    a.download-pdf:hover {
+      opacity: 1; }
 
 h1 {
   font-weight: 100;
