@@ -1,0 +1,124 @@
+article {
+    width:                      $containerWidth;
+    padding:                    $containerPad 0 $containerPad 0;
+  
+    &.intro {
+      padding:                  $containerPad 0 0 0;
+      width:                    100%;
+      margin-top:               -2rem;
+      box-shadow:               0 0 2rem 0 rgba($color: #000000, $alpha: 0.35);
+  
+      h1 {
+        width:                  $containerWidth;
+        margin:                 0 auto;
+        margin-top:             2rem;
+      }
+    }
+  
+    &.math-intro {
+      background-color:         #fff;
+      height:                   60vh;
+      overflow:                 hidden;
+      display:                  flex;
+      flex-direction:           column;
+
+
+  
+      h1 {
+        text-align:             center;
+        color:                  $bodyBlueMid !important;
+        margin-bottom:          2rem;
+      }
+
+      @include breakpoint(baby-bear) {
+        height:                  40vh;
+
+        h1 {
+            margin-bottom: 0;
+        }
+      }
+    }
+  
+    // Physics
+    &.physics-intro {
+      background:               #3b1664 url('../img/physics/physics-bg.jpg') no-repeat scroll top right;
+      background-size:          cover;
+      height:                   60vh;
+      overflow:                 hidden;
+      position:                 relative;
+
+      @include breakpoint(baby-bear) {
+        height:                   40vh;
+      }
+
+      h1 {
+          position:             relative;
+          z-index:              10;
+          color:                #fff;
+      }
+      
+
+      .universe {
+        width:                  $containerWidth;
+        position:               absolute;
+        left:                   0%;
+        height:                 100%;
+        top:                    -2rem;
+
+        img {
+            height: 130%;
+            mix-blend-mode: screen;
+            opacity: 0.4;
+            animation: rotate 160s linear infinite; 
+        }
+
+        @keyframes rotate{
+            to{ transform: rotate(360deg); }
+          }
+          
+      }
+    }
+  
+    &.mobile-intro {
+      background-color:         #e6e7ec;
+      height:                   60vh;
+      overflow:                 hidden;
+      position:                 relative;
+  
+      .sub-container {
+        position:               absolute;
+        z-index:                0;
+        width:                  100%;
+        height:                 100%;
+        display:                grid;
+        grid-template-columns:  1fr 1fr;
+  
+        .right {
+          background:           transparent url('../img/mobile/pad-one.jpg') no-repeat scroll top left;
+          background-size:      contain;
+          transform:            rotate(5deg);
+        }
+      }
+  
+      .container {
+        width:                  $containerWidth;
+        margin:                 0 auto;
+        display:                grid;
+        grid-template-columns:  50% 50%;
+        justify-items:          stretch;
+        align-items:            stretch;
+        height:                 100%;
+        position:               relative;
+        h1 {
+          color:                $bodyBlueMid !important;
+          width:                auto;
+        }
+  
+        .headliner {
+          grid-column:          1 / span 1;
+        }
+      }
+  
+      
+    }
+  }

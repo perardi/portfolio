@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -41,7 +41,7 @@
     {{ if (isset .Params "isphoto") }}
     {{ with .Resources.ByType "image" }}
 {{ range . }}
-<img class="gallery" src="{{ .RelPermalink }}" loading="lazy" width="2000">
+<img class="gallery gallery-go-full" src="{{ .RelPermalink }}" loading="lazy" width="2000">
 {{ end }}
 {{ end }}
     {{ else }}

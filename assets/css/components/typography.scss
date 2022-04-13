@@ -83,7 +83,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     line-height:      1.25;
   
     font-size:        clamp(0.875rem, 1.125vw, 1.625rem);
-    margin-bottom:    clamp(0.375rem, 0.75vw, 0.75rem);
+    margin-bottom:    clamp(0.375rem, 0.70vw, 0.70rem);
     display:          flex;
     flex-direction:   column;
     border-bottom:    1pt solid desaturate(darken($baseBlue,20%),10%);
@@ -106,6 +106,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
       font-size:        clamp(0.75rem, 1.0vw, 1.5rem);
       margin-bottom:    $headlineMarginGlobal;
       color:            desaturate(lighten($baseBlue,10%),05%);
+      margin-top: -2pt;
   }
   
   p {
@@ -124,6 +125,12 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
       font-size:        clamp(1.125rem, 1.25vw, 1.625rem);
       font-weight:      350;
       line-height: 1.9;
+    }
+    
+    &.photos-intro {
+      font-size:        clamp(1rem, 1.25vw, 1.625rem);
+      font-weight:      350;
+      line-height:      1.75;
     }
   
       &.sarcasm {
@@ -212,6 +219,26 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
       ul {
         margin-left: 1rem;
         margin-top: 0.5rem;
+
+        .sidebar {
+          float: right;
+          width: 40%;
+          padding-left: 2rem;
+          margin-right: -10%;
+
+          p {
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            margin-top: 0.5rem;
+            opacity: 0.75;
+            letter-spacing: 1pt;
+          }
+
+          img {
+            width: 100%;
+            box-shadow: 0 0 0.75rem 0 rgba($color: #000000, $alpha: 0.75);
+          }
+        }
 
         li {
           &::before {

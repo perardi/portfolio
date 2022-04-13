@@ -1,24 +1,34 @@
-<article>
-    <h1><span>Portfolio:</span> Wolfram|Alpha App Redesign</h1>
-</article>
+<article class="intro mobile-intro">
 
-<figure class="hero mobile-hero">
-    <img src="../img/mobile/mobile-hero.jpg" alt="Math Input">
-</figure>
+    <div class="sub-container">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+
+    <div class="container">
+        <div class="headliner">
+            <h1><span>Portfolio:</span> Wolfram|Alpha<br/>App Redesign</h1>
+        </div>
+    </div>
+
+</article>
 
 <article>
     <h2>The Project</h2>
 
-    <p class="portfolio-intro">A redesign of the Android and iOS apps for Wolfram|Alpha, with 3 big ideas in mind: a visual refresh, new features, and moving the apps from paid to in-app subscription pricing.</p>
+    <p class="portfolio-intro">A soon-to-launch redesign of the Android and iOS apps for Wolfram|Alpha, with 3 big ideas in mind&hellip;</p>
+    <p>&hellip;a visual refresh, including some navigation changes to better surface useful features&hellip;</p>
+    <p>&hellip;moving the app from paid-up-front to subscription-based&hellip;</p>
+    <p>&hellip;and debuting new features, most notably Photo Input.</p>
 </article>
 
 <figure class="hero spikey-hero">
     <div class="hero-grid">
-        <div class="left-hero">
-            <p>left</p>
+        <div class="left-hero chiral">
+            <img src="../img/mobile/mobile-1.jpg" alt="Wolfram|Alpha Mobile">
         </div>
         <div class="right-hero">
-            <p>right</p>
+            <img src="../img/mobile/mobile-2.jpg" alt="Wolfram|Alpha Mobile">
         </div>
     </div>
 </figure>
@@ -27,26 +37,19 @@
     <h2>The Goals</h2>
 
     <ul>
-        <li>
-            <strong>Transition from paid app to free-with-IAP model.</strong> x
-        </li>
-        <li>
-            <strong>Debut new features.</strong> x
-        </li>
-        <li>
-            Update navigation patterns.
-        </li>
-
+        <li><strong>A UI refresh.</strong> Update the app to better reflect the web product <em>and</em> current platform design trends, and do some tweaks to the overall navigation for better discoverability.</li>
+        <li><strong>Move to subscription pricing.</strong> The Wolfram|Alpha app is still using a “traditional”, in a sense, pricing model where users pay up front, which is very much not the current monetization idiom, and hurts uptake. We want to move to a subscription model that unlocks advanced features, but offers basic calculation capabilities up front.</li>
+        <li><strong>New features.</strong> And on that “advanced features” note, we are debuting a Photo Input feature allows users to take photos of math problems and equations and convert them to Wolfram|Alpha inputs.</li>
     </ul>
 </article>
 
 <figure class="hero spikey-hero">
     <div class="hero-grid">
-        <div class="left-hero chiral">
-            <p>left</p>
+        <div class="left-hero">
+            <img src="../img/mobile/mobile-3.jpg" alt="Wolfram|Alpha Mobile">
         </div>
         <div class="right-hero chiral">
-            <p>right</p>
+            <img src="../img/mobile/mobile-4.jpg" alt="Wolfram|Alpha Mobile">
         </div>
     </div>
 </figure>
@@ -56,21 +59,21 @@
 
     <ul>
         <li>
-            Legacy codebase.
+            <strong>Legacy codebase.</strong> On both iOS and Android, we are dealing with, well, “mature” codebases. In particular, the iOS app is a senior citizen of the app store, and though we have done significant refactoring over the years, sometimes design desires had to be tempered by the reality of some code constraints. Or at least, careful design reviews were needed as we moved to proper autolayout constraints.
         </li>
         <li>
-            Limited UX guidance.
+            <strong>Limited UX guidance.</strong> Due to a variety of team bandwidth limitations, I was responsible for signifcant UX/UI decicions for this app, from the overall flow of the Photo Input feature to the structure of the new subscription ad view. 
         </li>
     </ul>
 </article>
 
 <figure class="hero spikey-hero">
     <div class="hero-grid">
-        <div class="left-hero">
-            <p>left</p>
+        <div class="left-hero chiral">
+            <img src="../img/mobile/mobile-5.jpg" alt="Wolfram|Alpha Mobile">
         </div>
         <div class="right-hero">
-            <p>right</p>
+            <img src="../img/mobile/mobile-6.jpg" alt="Wolfram|Alpha Mobile">
         </div>
     </div>
 </figure>
@@ -80,7 +83,13 @@
 
     <ul>
         <li>
-            <strong>Prototyping.</strong> For the camera.</li>
+            <strong>Prototyping.</strong> As with many of my projects, prototyping came into play in a lot of views and designs for these apps. Some samples and examples&hellip;
+
+            <ul>
+                <li><strong>Responsive views.</strong> I am still perpetually dissatisfied with traditional design tools for working on responsive, scalable designs. There is limited functionality for describing how things should stretch and scale to developers, and sometimes there&rsquo;s just a need to explore how certain aspects of a design, like bitmap “hero” images, should scale and behave when you are moving to very disparate viewports.</li>
+                <li><strong>Photo Input.</strong> I created what amounts to a full view controller to explore the design and user flow of this view. Being able to create a high-fidelity prototype for this view was so useful&mdash;stakeholders appreciate being able to see the subtleties of how the various views transition into one another, and it helps me catch a lot of fine details like touch states early in the design process.</li>
+            </ul>
+        </li>
         <li>
             <strong>Automated specs.</strong> Specs have always been the bane of my projects, up until now. Sketch debuted <a href="https://www.sketch.com/collaborate/#developer-handoff">built-in web-based specs</a> for developers as this project got rolling, and it made a huge difference. Far less painful manual documentation, and no “oh no I didn&rsquo;t upload the most recent version to Zeplin” issues.
         </li>

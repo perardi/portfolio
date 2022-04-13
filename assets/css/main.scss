@@ -21,110 +21,21 @@
     @media (max-width: 1600px) { @content; }
   }
   @else if $point == mama-bear {
-    @media (max-width: 1250px) { @content; }
+    @media (max-width: 960px) { @content; }
   }
   @else if $point == baby-bear {
     @media (max-width: 650px)  { @content; }
   }
 }
 
+$containerWidth:  clamp(2rem, 80vw, 44rem);
+$containerPad:    2.5rem;
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
 
-body {
-  font-family: 'Archivo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
-    background-color: $greyBGDark;
-  box-sizing: border-box;
-  font-size: 16px;
-  position: relative;
+@import "components/body-sec-main.scss";
 
-  &.dark-mode {
-    background-color: $greyBGDark;
-  }
-
-  &:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0%;
-    z-index: 1;
-
-    mix-blend-mode: soft-light;
-    opacity: 0.5;
-    // animation: grain 0.4s steps(1) infinite;
-    background-image: url('../img/noise-256w.png');
-    display: none;
-    @keyframes grain {
-      0%,
-      100% {
-        background-position: 0 0;
-      }
-      20% {
-        background-position: 50% 50%;
-      }
-      40% {
-        background-position: 25% 25%;
-      }
-      60% {
-        background-position: 75% 75%;
-      }
-      80% {
-        background-position: 0% 100%;
-      }
-    }
-  }
-}
-
-main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-
-  &.home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 3rem);
-  }
-}
-
-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;  
-  padding: 2rem 0 8rem 0;
-
-    &.home {
-      width: clamp(2rem, 80vw, 50rem);
-      justify-content: flex-start;
-      align-items: flex-start;
-    }
-    
-    &.bosco {
-      width: clamp(2rem, 80vw, 50rem);
-      align-items: flex-start;
-      
-      
-      
-      h3 {
-        margin-top: 1.5rem;
-        font-size:        clamp(1.25rem, 2vw, 2.5rem); 
-      }
-    }
-}
-
-article {
-  width: clamp(2rem, 80vw, 44rem);
-  padding: clamp(1.75rem, 3vw, 3rem) 0 clamp(1.75rem, 3vw, 3rem) 0;
-}
-
+@import "components/article.scss";
 
 @import "components/typography.scss";  
 
@@ -133,21 +44,13 @@ article {
 @import "components/resume.scss";  
 
 figure {
+  margin: 0;
 
   img {
     width:          clamp(2rem, 80vw, 64rem);
     box-shadow:     0 0.5rem 1rem 0 rgba($color: #000000, $alpha: 0.75);
   }
 
-  figcaption {
-    width:          clamp(2rem, 80vw, 64rem);
-    font-weight:    400;
-    font-size:      clamp(0.5rem, 0.75vw, 0.875rem);
-    color:          rgba($color: $bodyBlueDark, $alpha: 0.75);
-    text-transform: uppercase;
-    letter-spacing: 1pt;
-    margin-bottom:  0.5rem;
-  }
 
   &.hero {
     background: #fff url('') no-repeat scroll center center;
@@ -191,7 +94,7 @@ figure {
 
     .hero-grid-three {
       width:          clamp(2rem, 90vw, 64rem);
-      display: grid;
+      display:        grid;
       grid-template-columns: 1fr 1fr 1fr;
       padding: 2.5rem 0 0 0;
 
@@ -246,6 +149,12 @@ figure {
       grid-template-columns: 1fr 1fr;
       padding: 2.5rem 0 0 0;
 
+      @include breakpoint(baby-bear) {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 0;
+      }
+
       .left-hero {
         background-color: transparent;
         display: flex;
@@ -257,6 +166,10 @@ figure {
 
         &.chiral {
           transform: scale(1.1);
+
+          @include breakpoint(baby-bear) {
+            transform: scale(1.0);
+          }
         }
       }
 
@@ -268,9 +181,19 @@ figure {
         position: relative;
         box-shadow: 0 0 2rem 0 rgba($color: #000000, $alpha: 0.75);
 
+        @include breakpoint(baby-bear) {
+          display: none;
+        }
+
         &.chiral {
           transform: scale(1.1);
+
+          @include breakpoint(baby-bear) {
+            transform: scale(1.0);
+          }
         }
+
+        
       }
 
       img {
@@ -284,18 +207,25 @@ figure {
       padding: 2rem 0;
       line-height: 1.2;
       color: $greyBGDark;
-      opacity: 0.5;
+      color: #fff;
+      opacity: 1;
     }
   }
 
   &.mobile-hero {
+    box-shadow: 0 4rem 2rem 0 rgba($color: #000000, $alpha: 0.35);
+    background-color: #e6e7ec;
+
+    
     img {
       width:          clamp(2rem, 40vw, 54rem);
-      box-shadow: none;
+      box-shadow:     none;
     }
   }
 
   &.mm-hero {
+    box-shadow: none;
+    margin-top: auto;
 
     img {
       width:          clamp(2rem, 90vw, 54rem);
@@ -332,6 +262,14 @@ figure {
     padding: 2rem 0 0rem 0;
     overflow: hidden;
     box-shadow: 0 0 2rem 0 rgba($color: #000000, $alpha: 0.35);
+
+    @include breakpoint(baby-bear) {
+      padding: 0;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 
 }
@@ -342,6 +280,11 @@ img.gallery {
   margin-bottom:    clamp(1rem, 2vw, 2rem); 
   box-shadow:       0 0.5rem 1.5rem 0 rgba($color: #000000, $alpha: 0.25);
 
+  &.gallery-go-full {
+    @include breakpoint(baby-bear) {
+      width: 100%;
+    }
+  }
 
 }
 

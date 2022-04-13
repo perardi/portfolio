@@ -1,14 +1,16 @@
-<article>
+<article class="intro math-intro">
     <h1><span>Portfolio:</span>
-        Wolfram|Alpha Math Input</h1>
+        Math Input</h1>
+
+        <figure class="hero mm-hero">
+            <img src="../img/mm-intro.png" alt="Math Input">
+            <div>
+                <img src="../img/mm-kb.png" alt="Math Input">
+            </div>
+        </figure>
 </article>
 
-<figure class="hero mm-hero">
-    <img src="../img/mm-intro.png" alt="Math Input">
-    <div>
-        <img src="../img/mm-kb.png" alt="Math Input">
-    </div>
-</figure>
+
 
 <article>
     <h2>The Project</h2>
@@ -28,11 +30,11 @@
 
 <figure class="hero plot-hero">
     <div class="hero-grid">
-        <div class="left-hero">
-            <img src="../img/mm/toggler-tweaks.png" alt="Toggler Tweaks">
+        <div class="left-hero chiral">
+            <img src="../img/mm/mm-1.jpg" alt="Keyboard">
         </div>
         <div class="right-hero">
-            <img src="../img/mm/vs-code.png" alt="VSCode">
+            <img src="../img/mm/mm-2.jpg" alt="Keyboard">
         </div>
     </div>
 </figure>
@@ -42,27 +44,27 @@
 
     <ul>
         <li>
-            Create an easy-to-use interface for math students to work with templates for common equations in algebra, calculus, matrices, and trigonometry.
+            <strong>User friendly.</strong> Create an easy-to-use interface for math students to work with templates for common equations in algebra, calculus, matrices, and trigonometry.
         </li>
         <li>
-            Give it a little visual zazz to help differentiate it from the existing functionality, and make it look less “technical” and intimidating compared to some math education products.
+            <strong>Make it pop.</strong> Give it a little visual zazz to help differentiate it from the existing functionality, and make it look less “technical” and intimidating compared to some math education products.
         </li>
         <li>
-            Make it mobile-friendly, as much as possible, but make it <em>extremely</em> usable on smaller laptop viewports for Chromebooks for education.
+            <strong>School laptop friendly.</strong> Make it mobile-friendly, as much as possible, but make it <em>extremely</em> usable on smaller laptop viewports for Chromebooks for education.
         </li>
         <li>
-            Create a design system that keeps colors coherent and systemitized, for the existing color library has gotten rather Byzantine.
+            <strong>Systemitize. </strong> Create a design system that keeps colors coherent and systemitized, for the existing color library has gotten rather Byzantine.
         </li>
     </ul>
 </article>
 
 <figure class="hero plot-hero">
     <div class="hero-grid">
-        <div class="left-hero chiral">
-            <img src="../img/mm/pad-errors.png" alt="Pad Errors">
+        <div class="left-hero">
+            <img src="../img/mm/mm-3.jpg" alt=" ">
         </div>
         <div class="right-hero chiral">
-            <img src="../img/mm/pad-templates.png" alt="Templates">
+            <img src="../img/mm/mm-4.jpg" alt=" ">
         </div>
     </div>
 </figure>
@@ -72,24 +74,25 @@
 
     <ul>
         <li>
-            One-man band.
+            <strong>Domain-specific knowledge.</strong> Though I have some math education, it&rsquo;s been a while since freshman year calculus, so I had to steel myself to re-learn some of these equations and symbols. <em>(A Dirac delta function? Huh?)</em>
         </li>
-    </ul>
+        <li>
+            <strong>Limited UX guidance.</strong> Due to a variety of team bandwidth limitations, I was responsible for signifcant UX/UI decicions, especially for mobile viewports.
+        </li>
+        <li>
+            <strong>Mobile issues.</strong> It was important to make this work decently well on phones, and <em>very</em> well on relatively small viewport Chromebooks, to target the education market. Which is difficult, given the potential density of these equation templates.
+        </li>
 
-    <ul class="constraint-grid">
-        <li>Icons</li>
-        <li>UX</li>
-        <li>Mobile</li>
     </ul>
 </article>
 
 <figure class="hero plot-hero">
     <div class="hero-grid">
-        <div class="left-hero">
-            <img src="../img/mm/toggler-tweaks.png" alt="Toggler Tweaks">
+        <div class="left-hero chiral">
+            <img src="../img/mm/mm-5.jpg" alt=" ">
         </div>
         <div class="right-hero">
-            <img src="../img/mm/vs-code.png" alt="VSCode">
+            <img src="../img/mm/mm-6.jpg" alt=" ">
         </div>
     </div>
 </figure>
@@ -99,19 +102,22 @@
 
     <ul>
         <li>
-            Prototyping, a lot.
+            <strong>Prototyping.</strong> There were so many micro-interactions and edge cases where creating a functional, high-fideilty prototype really helped clarify a lot of aspects of this design and user flow. Such as&hellip;
+            <ul>
+                <div class="sidebar">
+                    <img src="../img/mm/sidebar.png" alt="">
+                    <p>The little phone detail</p>
+                </div>
+                <li>
+                    <strong>A little phone detail.</strong> I&rsquo;m just a bit proud of this particular detail. Navigating within templates on phones presented a lot of issues&mdash;complex templates like sums and products resulted in small, dense touch targets. I eventually landed on what I called a “dpad” in my head. A nice little affordance that makes it easy to step sequentially through a template without having to zoom &amp; tap.
+                </li>
+                <li><strong>Math typesetting.</strong> Showing developers how mathematical symbols, like integrals, should scale vertically by using CSS and SVGs was quite useful, and also guided the way to me providing ready-to-go SVGs for final implementation.</li>
+                <li><strong>Grid layout.</strong> Using CSS grid to prototype the layout of all these various template icons helped moved things along&mdash;went through quite a few iterations of the template “keyboard” layout, and being able to quickly change some grid settings versus manual layout was much faster.</li>
+                <li><strong>Animations.</strong> Crafting some CSS transitions and animations in the browser helped clarify certain transitions for both stakeholders and developers.</li>
+            </ul>
         </li>
         <li>
-            Contact with internal users.
-        </li>
-        <li>
-            Casual user research.
-        </li>
-        <li>
-            Platform standards research.
-        </li>
-        <li>
-            The phone dpad.
+            <strong>Utilizing corporate knowledge.</strong> Wolfram&rsquo;s primary product is called <em>Mathematica</em>. So, as one might infer: quite a few math folks on staff. Whenever a question about math would come up&mdash;the vagaries of equation typsetting, order of operations, suggestions as to icons for particular functions&mdash;I reached out for assistance from the team.
         </li>
     </ul>
 

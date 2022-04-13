@@ -1,11 +1,14 @@
-<article>
+<article class="intro physics-intro">
     <h1><span>Portfolio:</span>
         Wolfram Physics Project</h1>
-</article>
 
-<figure class="hero physics-super-hero">
-    <img src="../img/physics-logo.svg" alt="Wolfram Physics Project">
-</figure>
+        <div class="universe">
+            <img src="../img/physics/universe.jpg" alt="Universe Graph">
+        </div>
+        <div class="darkmatter">
+
+        </div>
+</article>
 
 <article>
     <h2>The Project</h2>
@@ -25,7 +28,7 @@
     <h2>The Goals</h2>
 
     <ul>
-        <li><strong>Communicate.</strong> Make a visually attractive site to present this physics theory, balancing the academic content with a bold and color visual design.</li>
+        <li><strong>Communicate.</strong> Design an attractive, vibrant site to present this physics theory, balancing the academic content with bold and colorful visuals.</li>
         <li><strong>Systematize.</strong> Create a robust design system that allowed quick hand-off to developers.</li>
         <li><strong>Iterate.</strong> Develop a design pipeline to rapidly iterate on constantly evolving incoming content.</li>
         
@@ -77,12 +80,12 @@
 
 <ul>
     <li>
-        <strong>Prototyping.</strong> The design of the site involved heavy use of in-browser prototyping, using a static site generator, as well as HTML/CSS/JS written by me. This allowed me to iterate rapidly based off evolving and incoming content, and produced deliverables that were immediately ready for our web team to deploy. Let&rsquo;s walk through how some of the key technologies helped me get this project live&hellip;
+        <strong>Prototyping.</strong> The design of the site involved heavy use of in-browser prototyping, using a static site generator, as well as HTML/CSS/JS written by me. This allowed me to iterate rapidly based off evolving and incoming content, and produce deliverables that were immediately ready for our web team to deploy. Let&rsquo;s walk through how some of the key technologies helped me get this project live&hellip;
 
         <ul>
-            <li><strong>CSS Grid.</strong> Our web team had never utilized <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid">CSS grid</a> in any capacity. But, it was extremely useful for several aspects of this site, and by providing CSS/SCSS to our developers, we rapidly deployed this without significant re-styling and re-structuring using older techniques. <em></em></li>
+            <li id="c2"><strong>CSS Grid.</strong> Our web team had never utilized <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid">CSS grid</a> in any capacity. But, it was extremely useful for several aspects of this site, and by providing CSS/SCSS to our developers, we rapidly deployed this without significant re-styling and re-structuring using older techniques.<a class="footie" href="#c2">2</a></li>
             <li><strong>Variables and Well-Formed SVGs.</strong> I specifically prototyped and designed this using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS color variables</a> to keep the styles consistent throughout the site, and made sure all of my assets were SVGs with well-formed internal DOMs so we could iterate and play with colors without painful manual regeneration of every graphics asset.</li>
-            <li><strong>Static Site Generators.</strong> I leaned heavily into my <a href="https://gohugo.io">static site generator of choice</a> to create functional prototypes of complex parts of the site, including <a href="https://www.wolframphysics.org/archives/index/">what amounts to</a> a full web-based file browser, to help demonstrate the feasibility of such features to stakeholders and developers.</li>
+            <li id="c3"><strong>Static Site Generators.</strong> I leaned heavily into my <a href="https://gohugo.io">static site generator of choice</a> to create functional prototypes of complex parts of the site, including <a href="https://www.wolframphysics.org/archives/index/">what amounts to</a> a full web-based file browser, to help demonstrate the feasibility of such features to stakeholders and developers.<a class="footie" href="#c3">3</a></li>
         </ul>
     </li>
     <li>
@@ -90,8 +93,8 @@
     </li>
 
     <ul class="tangent">
-        <li class="footnote"><a href="#c2">2</a> No. More. Floats. Ever.</li>
-        <li class="footnote"><a href="#c3">3</a> Big fan of the Hugo static site generator&mdash;very powerful functionality that lives in a single binary, so I can have the power of a real web development framework without a leaning tower of Ruby or node.js.</li>
+        <li class="footnote" id="cf2"><a href="#c2">2</a> No. More. Floats. Ever.</li>
+        <li class="footnote" id="cf3"><a href="#c3">3</a> Big fan of the Hugo static site generator&mdash;very powerful functionality that lives in a single binary, so I can have the power of a real web development framework without a leaning tower of Ruby or node.js.</li>
     </ul>
 </ul>
 </article> 
