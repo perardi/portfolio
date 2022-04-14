@@ -1,41 +1,41 @@
 h1,h2,h3,h4,h5,h6,p,ul,li {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    font-size: 1rem;
-    color: $bodyBlueDark;
-    font-weight: 400;
+    margin:                                     0;
+    padding:                                    0;
+    line-height:                                1;
+    font-size:                                  1rem;
+    color:                                      $bodyBlueDark;
+    font-weight:                                400;
   
     &.dark-mode {
-      color: $bodyBlueDark;
+      color:                                    $bodyBlueDark;
     }
   }
   
   a {
-    text-decoration: none;
-    border-bottom: 1pt solid $bodyBlueLighterDark;
-    padding-bottom: 3pt;
-    color: $bodyBlueDark;
-    transition: border-bottom 0.125s ease-in-out;
+    text-decoration:                            none;
+    border-bottom:                              1pt solid $bodyBlueLighterDark;
+    padding-bottom:                             3pt;
+    color:                                      $bodyBlueDark;
+    transition:                                 border-bottom 0.125s ease-in-out;
   
     &:hover {
-      border-bottom: 1pt solid $bodyBlueDark;
+      border-bottom:                            1pt solid $bodyBlueDark;
     }
 
     &.download-pdf {
-      border: none;
-      padding: 0;
-      font-size: 0.825rem;
-      opacity: 0.75;
+      border:                                   none;
+      padding:                                  0;
+      font-size:                                0.825rem;
+      opacity:                                  0.75;
 
       &:hover {
-        opacity: 1;
+        opacity:                                1;
       }
     }
   }
 
-  $headlineMarginGlobal: clamp(0.375rem, 0.875vw, 0.875rem);
-  $headlineMarginHero: clamp(0.5rem, 1vw, 1.25rem);
+  $headlineMarginGlobal:                        clamp(0.375rem, 0.875vw, 0.875rem);
+  $headlineMarginHero:                          clamp(0.5rem, 1vw, 1.25rem);
   
   h1 {
     font-weight:      100;
@@ -90,15 +90,15 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
   }
   
   h4 {
-    font-weight:      400;
-    line-height:      1.25;
-  
-    font-size:        clamp(0.875rem, 1.125vw, 1.625rem);
-    margin-bottom:    clamp(0.375rem, 0.70vw, 0.70rem);
-    display:          flex;
-    flex-direction:   column;
-    border-bottom:    1pt solid desaturate(darken($baseBlue,20%),10%);
-    padding-bottom:   4pt;
+    font-weight:                              400;
+    line-height:                              1.25;
+
+    font-size:                                clamp(0.875rem, 1.125vw, 1.625rem);
+    margin-bottom:                            clamp(0.375rem, 0.70vw, 0.70rem);
+    display:                                  flex;
+    flex-direction:                           column;
+    border-bottom:                            1pt solid desaturate(darken($baseBlue,20%),10%);
+    padding-bottom:                           4pt;
 
     span {
     text-transform:   uppercase;
@@ -111,13 +111,13 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
   }
 
   h5 {
-      font-weight:      400;
-      line-height:      1.25;
+      font-weight:                            400;
+      line-height:                            1.25;
   
-      font-size:        clamp(0.75rem, 1.0vw, 1.5rem);
-      margin-bottom:    $headlineMarginGlobal;
-      color:            desaturate(lighten($baseBlue,10%),05%);
-      margin-top:       -4pt;
+      font-size:                              clamp(0.75rem, 0.9375vw, 1.325rem);
+      margin-bottom:                          $headlineMarginGlobal;
+      color:                                  desaturate(lighten($baseBlue,10%),05%);
+      margin-top:                             -4pt;
   }
   
   p {

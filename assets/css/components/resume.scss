@@ -17,7 +17,7 @@ section.resume {
     aside {
 
         @include breakpoint(baby-bear) {
-            grid-row: 3;
+            grid-row:               3;
         }
 
         ul {
