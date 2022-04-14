@@ -8,12 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
-
 
   {{ $style := resources.Get "css/main.scss" | toCSS }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
-
 
   <meta name="theme-color" content="#cbcdd2">
 </head>
@@ -36,9 +35,7 @@
         </section>
 </main>
 
-{{ partial "nav.html" . }}
-
-  
+{{ partial "nav.html" . }}  
 
 </body>
 
