@@ -1,4 +1,4 @@
-baseURL = "http://perardi.info/"
+baseURL = "https://perardi.info/"
 languageCode = "en-us"
 title = "Chris Perardi | Portfolio"
 sectionPagesMenu = "main"
