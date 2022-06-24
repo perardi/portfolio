@@ -68,6 +68,13 @@ body {
     flex-direction: column;
     align-items: center;  
     padding: 2rem 0 8rem 0;
+
+    &.photography {
+      width: clamp(2rem, 80vw, 50rem);
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 2rem 0 2rem 0;
+    }
   
       &.home {
         width: clamp(2rem, 80vw, 50rem);

@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Title }}</title>
+  <meta name="description" content="Perardi Portfolio">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+
+  {{ $style := resources.Get "css/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+
+  <meta name="theme-color" content="#cbcdd2">
+</head>
+
+<body>
+
+{{ if (isset .Params "isdark") }}
+<body class="dark-mode">
+{{ else }}
+<body>
+{{ end }}    
+
+<main>
+    <section class="photography">
+        <h1>Event Albums</h1>
+        <p class="album-intro">Hey. Looking to download photos from some party or the beach or whatever? They are hopefully here.</p>
+        <p class="album-intro">If you can <a href="https://www.instagram.com/perardi/">credit my Instagram</a>, go for it, but I don&CloseCurlyQuote;t care all that much.</p>
+  </section>
+
+  <div class="album-container">
+    <div class="album-backing">
+        <img src="../img/photography/DSF0596.jpg" alt="The Vixen at Black Girl Magic, Pride Fest">
+    </div>
+
+    <div class="album-info">
+        <h3><a href="https://photos.app.goo.gl/Wk5T2XFEmy33BEZTA">Black Girl Magic</a></h3>
+        <h4>June 19, 2022</h4>
+        <p>Black Girl Magic at Pride Fest.</p>
+    </div>
+</div>
+</main>
+
+
+</body>
+
+</html>

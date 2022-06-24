@@ -127,6 +127,14 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     font-size:        clamp(1rem, 1.125vw, 1.325rem);
     margin-bottom:    $headlineMarginGlobal;
 
+    &.album-intro {
+      font-size:        clamp(1.125rem, 1.25vw, 1.625rem);
+      font-weight:      350;
+      line-height:      1.6;
+
+      max-width: 30rem;
+    }
+
     em {
       font-style:     italic;
       opacity:        0.8;
